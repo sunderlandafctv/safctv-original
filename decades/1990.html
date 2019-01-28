@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <head>
-    <title>1990's - SunderlandAFC.TV</title>
-    <base target="_blank">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="../css/please-wait.css" rel="stylesheet" type="text/css">
-    <link href="../css/style.css" rel="stylesheet" type="text/css">
-    <link href="../css/svgflags.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel='icon' href='../bin/favicon.ico' type='image/x-icon'>
+	<title>1990's - SunderlandAFC.TV</title>
+	<base target="_blank">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="../css/please-wait.css" rel="stylesheet" type="text/css">
+	<link href="../css/style.css" rel="stylesheet" type="text/css">
+	<link href="../css/svgflags.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<link rel='icon' href='../bin/favicon.ico' type='image/x-icon'>
 </head>
 <body>
-  <div class="w-full" id="tooSmallScreen"><h1 class="w-full" style="margin-left: 10px;"><strong class="accent">your device is too small, </strong>please access this site from a computer.</h1></div>
+	<div class="w-full" id="tooSmallScreen">
+		<h1 class="w-full" style="margin-left: 10px;"><strong class="accent">your device is too small, </strong>please access this site from a computer.</h1>
+	</div>
 	<main id="visibleScreen" style="overflow-x: hidden !important;">
 		<header class="flex v-center w-full h-100" id="homeHeader">
-      <h1 class="inline" style="margin-left: 10px"><a class="accent h-full" href="index.html"></a>.TV</h1>
-      <div id="mobileHamburger"><label class="pseudo" for="mobileCheck"><span></span><span></span><span></span></label></div>
-      <input type="checkbox" id="mobileCheck">
+			<h1 class="inline" style="margin-left: 10px"><a class="accent h-full" href="index.html"></a>.TV</h1>
+			<div id="mobileHamburger"><label class="pseudo" for="mobileCheck"><span></span><span></span><span></span></label></div>
+			<input type="checkbox" id="mobileCheck">
 			<nav class="flex h-spacearound v-center right w-half h-full" style="margin-left: auto; transition: color 0.2s, background-color 0.2s;">
 				<a id="home" class="active">Home</a>
 				<a id="decades" >Decades</a>
 				<a id="players">Players</a>
 				<a id="top10s">Top 10s</a>
 				<a id="about">About</a>
-      </nav>
-    </header>
-    <h1 class="text-center" style="font-size: 50px; margin-top: 20px;"><strong class="accent">1990</strong>s</h1>
-    <footer class="flex h-center v-center w-full h-100 accent" style="background: var(--accent);">
-      <span class="label">
-        If you know of any other vintage Sunderland footage contact us at 
-        <a href="#" target="_blank">hello@sunderlandafc.tv</a>
-      </span>
-    </footer>
-  </main>
-  <script src="../js/papaparse.min.js"></script>
-  <script src="../js/decadepage.js"></script>
+			</nav>
+		</header>
+		<h1 class="text-center" style="font-size: 50px; margin-top: 20px;"><strong class="accent">1990</strong>s</h1>
+		<footer class="flex h-center v-center w-full h-150 column absolute">
+			<a href="https://ryncmrfrd.me" class="label text-center">
+			<i class="icon code"></i> with <i class="icon heart accent"></i> by  Ryan Comerford
+			</a>
+			<span class="label text-center">
+				If you know of any other vintage Sunderland footage contact us at 
+				<a href="mailto:hello@sunderlandafc.tv" target="_blank">hello@sunderlandafc.tv</a><br>
+				<div class="flex h-spacearound" style="margin: 10px 0 5px 0;" id="socialLinks">
+					<a id="facebook" href="https://go.sunderlandafc.tv/facebook"><i class="icon facebook"></i></a>
+					<a id="twitter" href="https://go.sunderlandafc.tv/twitter"><i class="icon twitter"></i></a>
+					<a id="youtube" href="https://go.sunderlandafc.tv/youtube"><i class="icon youtube"></i></a>
+				</div>
+			</span>
+		</footer>
+	</main>
+	<script src="../js/papaparse.min.js"></script>
+	<script src="../js/decadepage.js"></script>
 </body>
 </html>

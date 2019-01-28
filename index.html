@@ -1,220 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - SUNDERLANDAFC.TV</title>
-    <link rel='icon' href='bin/favicon.ico' type='image/x-icon'>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- loading screen code -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/please-wait/0.0.5/please-wait.min.css" integrity="sha256-+EVukertp+JNXktfbiOXsUjvPcnHOkkNkPixeI9mg1o=" crossorigin="anonymous" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/please-wait/0.0.5/please-wait.min.js" integrity="sha256-VdpyBKkQpTaeKm6ZDxHfYXrnZKY6J+uMp0Ok1wq4Nn4=" crossorigin="anonymous"></script>
-</head>
-
-<body onload="loading_screen.finish();">
-    <script>
-        var loading_screen = pleaseWait({
-            logo: "",
-            backgroundColor: '#EB172B',
-            loadingHtml: "<div class='loader'></div>"
-        });
-    </script>
-    <noscript><h1 class="w-full h-full" style="margin: 0; padding: 10px; position: absolute; top: 0; left: 0; z-index: 9999; background: white;"><strong class="accent">no javascsript support detected, </strong>please enable it or access this site from a computer.</h1></noscript>
-    <div class="w-full" id="tooSmallScreen">
-        <h1 class="w-full" style="margin-left: 10px;"><strong class="accent">your device is too small, </strong>please access this site from a computer.</h1>
-    </div>
-    <main id="visibleScreen" style="overflow-x: hidden !important;">
-        <input type="checkbox" id="homePageTriangleCheck">
-        <header class="flex v-center w-full h-100 page-home">
-            <h1 class="inline" style="margin-left: 10px"><a class="accent h-full" href="index.html"></a>.TV</h1>
-            <input type="checkbox" id="mobileCheck">
-            <div id="mobileHamburger">
-                <label for="mobileCheck" class="hamburger">
-                    <span class="hamburger-box">
-                      <span class="hamburger-inner"></span>
-                    </span>
-                </label>
-            </div>
-            <nav class="flex h-spacearound v-center right w-half h-full" style="margin-left: auto; transition: color 0.2s, background-color 0.2s;">
-                <a id="home" class="active">Home</a>
-                <a id="decades">Decades</a>
-                <a id="players">Players</a>
-                <a id="top10s">Top 10s</a>
-                <a id="about">About</a>
-            </nav>
-            <div id="homePageTriangle"></div>
-        </header>
-        <section id="home" class="active">
-            <div class="flex h-center w-three-quarters" id="homeWelcomeCard" style="margin-top: 50px;">
-                <article style="box-shadow: none; border: none;">
-                    <div class="fadingImages left">
-                        <div class="1"></div>
-                        <div class="2"></div>
-                        <div class="3"></div>
-                        <div class="4"></div>
-                        <div class="5"></div>
-                    </div>
-                    <h1 class="accent" style="font-size: 35px">Welcome!</h1>
-                    <p>Sunderland have a long and illustrious history, but our glory years were before the advent of live games or even highlights of games were available. On this retro Sunderland fan site, you can watch videos of Sunderland matches from the 1900's to the 1990’s - including some of the classic games from Roker Park. You can also watch some of the star players of the past in action, and some of our greatest goals and moments.
-                    </p>
-                </article>
-            </div>
-            <h1 class="text-center">Watch Sunderland's record post war scorers!</h1>
-            <div class="flex h-spacearound w-three-quarters" id="topPlayers">
-                <button class="w-third" onclick="changePagePlayer(1)" id="homePlayersCard">
-                    <img id="playerCardImg" class="left" src="bin/Players/1.png" style="margin: 5px 10px 10px 10px">
-                    <h1 class="center">Kevin<br>Phillips</h1>
-                    <span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">235 games, 130 goals</span>
-                </button>
-                <button class="w-third" onclick="changePagePlayer(730)" id="homePlayersCard">
-                    <img id="playerCardImg" class="left" src="bin/Players/730.png" style="margin: 5px 10px 10px 10px">
-                    <h1 class="center">Gary<br>Rowell</h1>
-                    <span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">297 games, 103 goals</span>
-                </button>
-                <button class="w-third" onclick="changePagePlayer(340)" id="homePlayersCard">
-                    <img id="playerCardImg" class="left" src="bin/Players/340.png" style="margin: 5px 10px 10px 10px">
-                    <h1 class="center">Marco<br>Gabbiadini</h1>
-                    <span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">285 games, 87 goals</span>
-                </button>
-            </div>
-            <div class="flex h-spacearound w-three-quarters" id="homeOfTheMonth">
-                <article class="w-half">
-                    <h1>Goal of the Month</h1>
-                    <iframe src="https://www.youtube.com/embed/FHI-Tr3CVxw"></iframe>
-                </article>
-                <article class="w-half">
-                    <h1>Game of the Month</h1>
-                    <iframe src="https://www.youtube.com/embed/ysDg9JodQnY"></iframe>
-                </article>
-            </div>
-        </section>
-        <section id="decades">
-            <div class="flex column h-center v-center">
-                <h1 class="accent">Decades</h1>
-                <p class="w-three-quarters">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam volutpat ornare orci vel suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent et risus et orci aliquam aliquam quis et mauris. Cras vitae vehicula ante. Vestibulum id rutrum mauris, sed facilisis mauris.
-                </p>
-            </div>
-            <div class="flex h-spacearound h-three-quarters">
-                <button class="w-half">
-                    <h1 style="margin: 25px">Pre WW1</h1>
-                    <img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
-                </button>
-                <button class="w-half">
-                    <h1 style="margin: 25px">Pre WW2</h1>
-                    <img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
-                </button>
-            </div>
-            <div class="flex h-spacearound h-three-quarters">
-                <button class="w-half">
-                    <h1 style="margin: 25px">1940's</h1>
-                    <img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
-                </button>
-                <button class="w-half">
-                    <h1 style="margin: 25px">1950's</h1>
-                    <img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
-                </button>
-            </div>
-            <div class="flex h-spacearound h-three-quarters">
-                <button class="w-half">
-                    <h1 style="margin: 25px">1960's</h1>
-                    <img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
-                </button>
-                <button class="w-half">
-                    <h1 style="margin: 25px">1970's</h1>
-                    <img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
-                </button>
-            </div>
-            <div class="flex h-spacearound h-three-quarters">
-                <button class="w-half">
-                    <h1 style="margin: 25px">1980's</h1>
-                    <img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
-                </button>
-                <button class="w-half">
-                    <h1 style="margin: 25px">1990's</h1>
-                    <img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
-                </button>
-            </div>
-        </section>
-        <section id="players">
-            <div class="flex column h-center v-center">
-                <h1 class="accent">Players</h1>
-                <p class="w-three-quarters">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam volutpat ornare orci vel suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent et risus et orci aliquam aliquam quis et mauris. Cras vitae vehicula ante. Vestibulum id rutrum mauris, sed facilisis mauris.
-                </p>
-            </div>
-            <div class="flex h-spacearound h-three-quarters">
-                <button class="w-half">
-                    <h1 class="center" style="margin: 25px">Pre WW1</h1>
-                    <img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
-                </button>
-                <button class="w-half">
-                    <h1 class="center" style="margin: 25px">Pre WW2</h1>
-                    <img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
-                </button>
-            </div>
-            <div class="flex space three-quarter">
-                <button class="w-half">
-                    <h1 class="center" style="margin: 25px">1940's</h1>
-                    <img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
-                </button>
-                <button class="w-half">
-                    <h1 class="center" style="margin: 25px">1950's</h1>
-                    <img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
-                </button>
-            </div>
-            <div class="flex space three-quarter">
-                <button class="w-half">
-                    <h1 class="center" style="margin: 25px">1960's</h1>
-                    <img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
-                </button>
-                <button class="w-half">
-                    <h1 class="center" style="margin: 25px">1970's</h1>
-                    <img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
-                </button>
-            </div>
-            <div class="flex space three-quarter">
-                <button class="w-half">
-                    <h1 class="center" style="margin: 25px">1980's</h1>
-                    <img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
-                </button>
-                <button class="w-half">
-                    <h1 class="center" style="margin: 25px">1990's</h1>
-                    <img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
-                </button>
-            </div>
-        </section>
-        <section id="top10s">
-            <div class="flex column">
-                <h1 class="text-center accent" style="font-size: 45px; margin-bottom: 0;">Coming Soon</h1>
-                <p class="text-center">good things come to those who wait.</p>
-            </div>
-            <!-- this div is the single most janky thing on this page. remove it and try to navigate. feck me -->
-            <div style="margin-bottom: 90vh"></div>
-        </section>
-        <section id="about">
-            <div class="flex column">
-                <h1 class="text-center accent" style="font-size: 45px; margin-bottom: 0;">Coming Soon</h1>
-                <p class="text-center">it's not too hard to just imagine this page.</p>
-            </div>
-            <!-- ooh good another one -->
-            <div style="margin-bottom: 90vh"></div>
-        </section>
-
-        <footer class="flex h-center v-center w-full h-100 column absolute">
-            <a href="https://ryncmrfrd.me" class="label text-center">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Home - SUNDERLANDAFC.TV</title>
+		<link rel='icon' href='bin/favicon.ico' type='image/x-icon'>
+		<link rel="stylesheet" href="css/style.css">
+		<!-- loading screen code -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/please-wait/0.0.5/please-wait.min.css" integrity="sha256-+EVukertp+JNXktfbiOXsUjvPcnHOkkNkPixeI9mg1o=" crossorigin="anonymous" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/please-wait/0.0.5/please-wait.min.js" integrity="sha256-VdpyBKkQpTaeKm6ZDxHfYXrnZKY6J+uMp0Ok1wq4Nn4=" crossorigin="anonymous"></script>
+	</head>
+	<body onload="loading_screen.finish();">
+		<script>
+			var loading_screen = pleaseWait({
+			    logo: "",
+			    backgroundColor: '#EB172B',
+			    loadingHtml: "<div class='loader'></div>"
+			});
+		</script>
+		<noscript>
+			<h1 class="w-full h-full" style="margin: 0; padding: 10px; position: absolute; top: 0; left: 0; z-index: 9999; background: white;"><strong class="accent">no javascsript support detected, </strong>please enable it or access this site from a computer.</h1>
+		</noscript>
+		<div class="w-full" id="tooSmallScreen">
+			<h1 class="w-full" style="margin-left: 10px;"><strong class="accent">your device is too small, </strong>please access this site from a computer.</h1>
+		</div>
+		<main id="visibleScreen" style="overflow-x: hidden !important;">
+			<input type="checkbox" id="homePageTriangleCheck">
+			<header class="flex v-center w-full h-100 page-home">
+				<h1 class="inline" style="margin-left: 10px"><a class="accent h-full" href="index.html"></a>.TV</h1>
+				<input type="checkbox" id="mobileCheck">
+				<div id="mobileHamburger">
+					<label for="mobileCheck" class="hamburger">
+					<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+					</span>
+					</label>
+				</div>
+				<nav class="flex h-spacearound v-center right w-half h-full" style="margin-left: auto; transition: color 0.2s, background-color 0.2s;">
+					<a id="home" class="active">Home</a>
+					<a id="decades">Decades</a>
+					<a id="players">Players</a>
+					<a id="top10s">Top 10s</a>
+					<a id="about">About</a>
+				</nav>
+				<div id="homePageTriangle"></div>
+			</header>
+			<section id="home" class="active">
+				<div class="flex h-center w-three-quarters" id="homeWelcomeCard" style="margin-top: 50px;">
+					<article style="box-shadow: none; border: none;">
+						<div class="fadingImages left">
+							<div class="1"></div>
+							<div class="2"></div>
+							<div class="3"></div>
+							<div class="4"></div>
+							<div class="5"></div>
+						</div>
+						<h1 class="accent" style="font-size: 35px">Welcome!</h1>
+						<p>Sunderland have a long and illustrious history, but our glory years were before the advent of live games or even highlights of games were available. On this retro Sunderland fan site, you can watch videos of Sunderland matches from the 1900's to the 1990’s - including some of the classic games from Roker Park. You can also watch some of the star players of the past in action, and some of our greatest goals and moments.
+						</p>
+					</article>
+				</div>
+				<h1 class="text-center">Watch Sunderland's record post war scorers!</h1>
+				<div class="flex h-spacearound w-three-quarters" id="topPlayers">
+					<button class="w-third" onclick="changePagePlayer(1)" id="homePlayersCard">
+						<img id="playerCardImg" class="left" src="bin/Players/1.png" style="margin: 5px 10px 10px 10px">
+						<h1 class="center">Kevin<br>Phillips</h1>
+						<span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">235 games, 130 goals</span>
+					</button>
+					<button class="w-third" onclick="changePagePlayer(730)" id="homePlayersCard">
+						<img id="playerCardImg" class="left" src="bin/Players/730.png" style="margin: 5px 10px 10px 10px">
+						<h1 class="center">Gary<br>Rowell</h1>
+						<span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">297 games, 103 goals</span>
+					</button>
+					<button class="w-third" onclick="changePagePlayer(340)" id="homePlayersCard">
+						<img id="playerCardImg" class="left" src="bin/Players/340.png" style="margin: 5px 10px 10px 10px">
+						<h1 class="center">Marco<br>Gabbiadini</h1>
+						<span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">285 games, 87 goals</span>
+					</button>
+				</div>
+				<div class="flex h-spacearound w-three-quarters" id="homeOfTheMonth">
+					<article class="w-half">
+						<h1>Goal of the Month</h1>
+						<iframe src="https://www.youtube.com/embed/FHI-Tr3CVxw"></iframe>
+					</article>
+					<article class="w-half">
+						<h1>Game of the Month</h1>
+						<iframe src="https://www.youtube.com/embed/ysDg9JodQnY"></iframe>
+					</article>
+				</div>
+			</section>
+			<section id="decades">
+				<div class="flex column h-center v-center">
+					<h1 class="accent">Decades</h1>
+					<p class="w-three-quarters">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam volutpat ornare orci vel suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent et risus et orci aliquam aliquam quis et mauris. Cras vitae vehicula ante. Vestibulum id rutrum mauris, sed facilisis mauris.
+					</p>
+				</div>
+				<div class="flex h-spacearound h-three-quarters">
+					<button class="w-half">
+						<h1 style="margin: 25px">Pre WW1</h1>
+						<img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
+					</button>
+					<button class="w-half">
+						<h1 style="margin: 25px">Pre WW2</h1>
+						<img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
+					</button>
+				</div>
+				<div class="flex h-spacearound h-three-quarters">
+					<button class="w-half">
+						<h1 style="margin: 25px">1940's</h1>
+						<img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
+					</button>
+					<button class="w-half">
+						<h1 style="margin: 25px">1950's</h1>
+						<img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
+					</button>
+				</div>
+				<div class="flex h-spacearound h-three-quarters">
+					<button class="w-half">
+						<h1 style="margin: 25px">1960's</h1>
+						<img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
+					</button>
+					<button class="w-half">
+						<h1 style="margin: 25px">1970's</h1>
+						<img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
+					</button>
+				</div>
+				<div class="flex h-spacearound h-three-quarters">
+					<button class="w-half">
+						<h1 style="margin: 25px">1980's</h1>
+						<img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
+					</button>
+					<button class="w-half">
+						<h1 style="margin: 25px">1990's</h1>
+						<img src="img.jpg" style="height: 250px; width: calc(100% - 20px);">
+					</button>
+				</div>
+			</section>
+			<section id="players">
+				<div class="flex column h-center v-center">
+					<h1 class="accent">Players</h1>
+					<p class="w-three-quarters">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam volutpat ornare orci vel suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Praesent et risus et orci aliquam aliquam quis et mauris. Cras vitae vehicula ante. Vestibulum id rutrum mauris, sed facilisis mauris.
+					</p>
+				</div>
+				<div class="flex h-spacearound h-three-quarters">
+					<button class="w-half">
+						<h1 class="center" style="margin: 25px">Pre WW1</h1>
+						<img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
+					</button>
+					<button class="w-half">
+						<h1 class="center" style="margin: 25px">Pre WW2</h1>
+						<img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
+					</button>
+				</div>
+				<div class="flex space three-quarter">
+					<button class="w-half">
+						<h1 class="center" style="margin: 25px">1940's</h1>
+						<img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
+					</button>
+					<button class="w-half">
+						<h1 class="center" style="margin: 25px">1950's</h1>
+						<img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
+					</button>
+				</div>
+				<div class="flex space three-quarter">
+					<button class="w-half">
+						<h1 class="center" style="margin: 25px">1960's</h1>
+						<img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
+					</button>
+					<button class="w-half">
+						<h1 class="center" style="margin: 25px">1970's</h1>
+						<img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
+					</button>
+				</div>
+				<div class="flex space three-quarter">
+					<button class="w-half">
+						<h1 class="center" style="margin: 25px">1980's</h1>
+						<img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
+					</button>
+					<button class="w-half">
+						<h1 class="center" style="margin: 25px">1990's</h1>
+						<img src="img.jpg" style="height: 150px; width: calc(100% - 20px);">
+					</button>
+				</div>
+			</section>
+			<section id="top10s">
+				<div class="flex column">
+					<h1 class="text-center accent" style="font-size: 45px; margin-bottom: 0;">Coming Soon</h1>
+					<p class="text-center">good things come to those who wait.</p>
+				</div>
+				<!-- this div is the single most janky thing on this page. remove it and try to navigate. feck me -->
+				<div style="margin-bottom: 90vh"></div>
+			</section>
+			<section id="about">
+				<div class="flex column">
+					<h1 class="text-center accent" style="font-size: 45px; margin-bottom: 0;">Coming Soon</h1>
+					<p class="text-center">it's not too hard to just imagine this page.</p>
+				</div>
+				<!-- ooh good another one -->
+				<div style="margin-bottom: 90vh"></div>
+			</section>
+			<footer class="flex h-center v-center w-full h-150 column absolute">
+				<a href="https://ryncmrfrd.me" class="label text-center">
 				<i class="icon code"></i> with <i class="icon heart accent"></i> by  Ryan Comerford
-			</a>
-            <span class="label text-center">
-                If you know of any other vintage Sunderland footage contact us at 
-                <a href="mailto:hello@sunderlandafc.tv" target="_blank">hello@sunderlandafc.tv</a>
-			</span>
-        </footer>
-    </main>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.3/papaparse.min.js" integrity="sha256-1KCNEBmmUm8Oo4IOlg7ZnbFjBZXxCa9bILP7eGDqYOY=" crossorigin="anonymous"></script>
-    <script src="js/homepage.js"></script>
-</body>
-
+				</a>
+				<span class="label text-center">
+					If you know of any other vintage Sunderland footage contact us at 
+					<a href="mailto:hello@sunderlandafc.tv" target="_blank">hello@sunderlandafc.tv</a><br>
+					<div class="flex h-spacearound" style="margin: 10px 0 5px 0;" id="socialLinks">
+						<a id="facebook" href="https://go.sunderlandafc.tv/facebook"><i class="icon facebook"></i></a>
+						<a id="twitter" href="https://go.sunderlandafc.tv/twitter"><i class="icon twitter"></i></a>
+						<a id="youtube" href="https://go.sunderlandafc.tv/youtube"><i class="icon youtube"></i></a>
+					</div>
+				</span>
+			</footer>
+		</main>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.3/papaparse.min.js" integrity="sha256-1KCNEBmmUm8Oo4IOlg7ZnbFjBZXxCa9bILP7eGDqYOY=" crossorigin="anonymous"></script>
+		<script src="js/homepage.js"></script>
+	</body>
 </html>

@@ -218,6 +218,10 @@ table {
     height: 200px
 }
 
+.h-150 {
+    height: 150px
+}
+
 .h-100 {
     height: 100px
 }
@@ -349,12 +353,16 @@ iframe {
     background-image: url(../bin/icons/code.svg)
 }
 
-.icon.ryncmrfrd {
-    background-image: url(../bin/icons/wales.svg)
+.icon.facebook {
+    background-image: url(../bin/icons/facebook.svg)
 }
 
-.icon.accent {
-    fill: var(--accent)
+.icon.twitter {
+    background-image: url(../bin/icons/twitter.svg)
+}
+
+.icon.youtube {
+    background-image: url(../bin/icons/youtube.svg)
 }
 
 .flag.English {
@@ -708,6 +716,28 @@ header.page-home nav a.active {
 #playerCardImg {
     height: 144px;
     width: 144px
+}
+
+#socialLinks a{
+    height: 35px;
+    width: 35px;
+    border-radius: 50% !important;
+    font-size: 1.2em;
+    background-color: transparent;
+    transition: background-color 0.3s; 
+}
+#socialLinks a#facebook:hover{
+    background-color: #3b599875;
+}
+#socialLinks a#twitter:hover{
+    background-color: #00aeed75;
+}
+#socialLinks a#youtube:hover{
+    background-color: #ff000075;
+}
+#socialLinks a .icon{
+    display: block;
+    margin: 6.5px auto;
 }
 
 /*general responsive*/
