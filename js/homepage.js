@@ -22,7 +22,7 @@ $('#mobileCheck').change(function(){
     }
 });
 //when navigation button is clicked, call a change tabs function and remove funky red triangle
-$('nav a').on('click', function(){
+$('nav a.clickable').on('click', function(){
     const thisButton = this;
     const triangleCheck = $('#homePageTriangleCheck');
     //remove triangle if it exists
