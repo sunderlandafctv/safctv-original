@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+    <title>File not found - SunderlandAFC.TV</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" rel="stylesheet" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+</head>
+<body style="background-color: white;">
+<div class="flex h-center column" style="height: 80vh">
+  <h1 class="text-center accent" style="font-size: 150px; margin: 0;">404</h1>
+  <p class="text-center"></p>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>
+$(function(){let url=new URL(window.location.href);let searchParams=new URLSearchParams(url.search);const error=searchParams.get('e');console.log(error)
+if(error==null){$('p').html('The <strong id="error">file</strong> you requested was not found.')}
+else{$('p').html('The <strong id="error">'+error+'</strong> you requested was not found.')}})
+</script>
+
+</body>
+</html>
