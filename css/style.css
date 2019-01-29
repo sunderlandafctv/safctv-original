@@ -908,6 +908,16 @@ header.page-home nav a.active {
         margin: 0 auto
     }
 }
+@media (max-width:700px) {
+    #playerTabHalf{
+        flex-direction: column;
+    }
+    #playerTabHalf button{
+        display: block;
+        margin: 0 auto;
+        width: 95% !important;
+    }
+}
 @media (max-width:629px) {
     .fadingImages {
         float: none;
