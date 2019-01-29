@@ -24,20 +24,39 @@
 			<h1 class="w-full" style="margin-left: 10px;"><strong class="accent">your device is too small, </strong>please access this site from a computer.</h1>
 		</div>
 		<main id="visibleScreen">
-			<header class="flex v-center w-full h-100 page-player">
+			<header class="flex v-center w-full h-100 page-decade">
 				<h1 class="inline" style="margin-left: 10px"><a class="accent h-full" href="/"></a>.TV</h1>
 				<div id="mobileHamburger"><label class="pseudo" for="mobileCheck"><span></span><span></span><span></span></label></div>
 				<input type="checkbox" id="mobileCheck">
-				<nav class="flex h-spacearound v-center right w-half h-full" style="margin-left: auto; transition: color 0.2s, background-color 0.2s; justify-content: flex-end;">
-					<div class="search">
-						<input type="text" id="searchInput" placeholder="Search players ...">
-						<a href="#">
-						<i class="fas fa-search"></i>
-						</a>
-						<div class="flex h-center">
-							<p style="margin: 0;"><a class="searchResults" href="#" style="margin: 10px;"></a></p>
+				<div id="mobileHamburger">
+					<label for="mobileCheck" class="hamburger">
+					<span class="hamburger-box">
+					<span class="hamburger-inner"></span>
+					</span>
+					</label>
+				</div>
+				<nav class="flex h-spacebetween v-center right w-half h-full" style="transition: color 0.2s, background-color 0.2s;">
+						<div class="search" id="searchMobile">
+								<input type="text" id="searchInput" placeholder="Search players ...">
+								<a href="#">
+								<i class="fas fa-search"></i>
+								</a>
+								<div class="flex h-center">
+									<p style="margin: 0;"><a class="searchResults" href="#" style="margin: 10px;"></a></p>
+								</div>
+							</div>
+					<a id="home" class="clickable active">Home</a>
+					<a id="decades" class="clickable">Decades</a>
+					<a id="players" class="clickable">Players</a>
+					<div class="search" id="searchDesktop">
+							<input type="text" id="searchInput" placeholder="Search players ...">
+							<a href="#">
+							<i class="fas fa-search"></i>
+							</a>
+							<div class="flex h-center">
+								<p style="margin: 0;"><a class="searchResults" href="#" style="margin: 10px;"></a></p>
+							</div>
 						</div>
-					</div>
 				</nav>
 			</header>
 			<h1 class="text-center accent">Pre World War 1</h1>
