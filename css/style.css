@@ -851,16 +851,6 @@ header.page-home nav a.active {
     .hamburger .hamburger-inner::after {
         top: 20px
     }
-    .hamburger.active .hamburger-inner {
-        transform: translate3d(0, 10px, 0) rotate(45deg)
-    }
-    .hamburger.active .hamburger-inner::before {
-        transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
-        opacity: 0
-    }
-    .hamburger.active .hamburger-inner::after {
-        transform: translate3d(0, -20px, 0) rotate(-90deg)
-    }
     header.page-home nav {
         display: flex;
         flex-direction: column;
@@ -886,6 +876,18 @@ header.page-home nav a.active {
         overflow-y: auto;
         background: white
     }
+
+    #mobileCheck:checked + #mobileHamburger .hamburger .hamburger-inner {
+        transform: translate3d(0, 10px, 0) rotate(45deg)
+    }
+    #mobileCheck:checked + #mobileHamburger .hamburger .hamburger-inner::before {
+        transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+        opacity: 0
+    }
+    #mobileCheck:checked + #mobileHamburger .hamburger .hamburger-inner::after {
+        transform: translate3d(0, -20px, 0) rotate(-90deg)
+    }
+
     #homePageTriangleCheck:not(:checked) + header.page-home #mobileCheck:checked + div + nav {
         background: var(--accent)!important
     }

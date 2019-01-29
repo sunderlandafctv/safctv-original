@@ -13,7 +13,6 @@ $('#mobileCheck').change(function(){
         //if the checkbox has changed to the checked state
         $(window).scrollTop(0);
         nav.addClass('active');
-        hamburger.addClass('active');
         body.addClass('navActive').bind('touchmove',function(e){e.preventDefault()})
     }
     else{
@@ -43,7 +42,6 @@ $('nav a.clickable').on('click', function(){
     }
     if($(window).width() <= 838 ){
         //auto exit the navbar (mobile)
-        $('.hamburger').removeClass('active');
         $('body').removeClass('navActive');
         setTimeout(function(){
             $('#mobileCheck').prop("checked", false);
