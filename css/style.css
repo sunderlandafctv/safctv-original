@@ -533,12 +533,13 @@ nav a.active {
     color: var(--accent)
 }
 
+.pg-loading-center-middle{
+    height: 20vh !important;
+}
+
 div.loader {
-    display: inline-block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    display: block;
+    margin: 0 auto;
     width: 64px;
     height: 64px
 }
