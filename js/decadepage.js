@@ -1,3 +1,25 @@
+/*
+    https://sunderlandafc.tv
+    written by Ryan Comerford
+*/
+var playerNames = FuzzySet();
+//i dont know how to do xmlhttp requests so i've settled for fetch
+fetch('https://raw.githubusercontent.com/ryncmrfrd/sunderland/master/csv/players.csv')
+    .then((data) => data.text())
+    .then(function(fetch) {
+        Papa.parse(fetch, {
+            header: true,
+            complete: function(results) {
+                //create an array for search function later
+                for (var i = 0; i < results.data.length-1; i++) { 
+                    playerNames.add( String(results.data[i].Name) );
+                }
+                //callin' functionz
+                Search(results.data);
+                PlayersTab(results.data);
+            }
+        });
+    })
 //home screen navigation
 function HomeScreenNavigator(x){
     var xid =  $(x).attr('id');
@@ -11,7 +33,7 @@ function HomeScreenNavigator(x){
 function sortNumber(a,b) { return b - a; }
 //add players into that tab
 function PlayersTab(x){
-    var completedplayers = [];
+    /*var completedplayers = [];
     for(i = 0; i < x.length-1; i++){
         var href = $(location).attr('href');
         var decade = href.substring( href.lastIndexOf('/')+1 ).substring( 0,4 );
@@ -25,10 +47,8 @@ function PlayersTab(x){
                 '<div id="decadecard-image" class="sdl-home-top" style="box-shadow: none; background: url('+x[i].Picture+') center / cover;">'+
                 '</div>'+
             '</button>';
-            completedplayers.push(x[i].Name)
-        }
-    }
-
+        completedplayers.push(x[i].Name)
+    }*/
     var topscorers = []
     for(i = 0; i < x.length-1; i++){ topscorers.push(x[i].Goals); }
     topscorers = topscorers.slice(0, 4);
@@ -42,20 +62,27 @@ function PlayersTab(x){
         '</button>';
     }
 }
-//Link to player page
-function Click(x){
+//c'est cool outline around the search bar on focus. now with fades
+$('#searchInput').focus(function(){$('.search').addClass('focus');});
+$('#searchInput').focusout(function(){
+    $('.search').removeClass('focus');
+    $('#searchInput').val('');
     setTimeout(function(){
-        window.location.href = '../player.html?ID=' + x;
-    }, 200);
-}
-//CSV FILES BOI
-fetch('https://raw.githubusercontent.com/ryncmrfrd/sunderland/master/csv/players.csv')
-    .then((data) => data.text())
-    .then(function(result) {
-        PlayersTab( Papa.parse(result, {header:true}).data );
-        console.log('Dynamic content loaded correctly.');
-    })
-    .catch(function(err) {
-        console.error(err);
-        //window.location.href = '404.html';
+        $('.searchResults').html('');
+        $('.searchResults').attr('');
+    },2000);
+});
+//search players.csv and return fuzzy.js result as link
+function Search(parsedcsv){
+    const searchInput = $('#searchInput');
+    searchInput.keyup(function(){
+        if(playerNames.get(searchInput.val())){
+            var fuzzyresult = playerNames.get(searchInput.val())[0][1];
+            console.log(fuzzyresult)
+            $('.searchResults').html(fuzzyresult);
+            console.log($('.searchResults').html())
+            $('.searchResults').attr('href','../player.html?ID='+parsedcsv.filter(data => data.Name === fuzzyresult)[0].ID);
+        }
+        else{$('.searchResults').html('');}
     });
+}

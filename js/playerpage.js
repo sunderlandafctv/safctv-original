@@ -1,6 +1,6 @@
 /*
-* https://sunderlandafc.tv
-* written by Ryan Comerford
+    https://sunderlandafc.tv
+    written by Ryan Comerford
 */
 var playerNames = FuzzySet();
 //i dont know how to do xmlhttp requests so i've settled for fetch
