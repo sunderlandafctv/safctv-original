@@ -2,6 +2,14 @@
     https://sunderlandafc.tv
     written by Ryan Comerford
 */
+//click the right button with a valid hash in url
+$( document ).ready(function() {
+    var hash = window.location.hash;
+    if(hash.toString() == '#players' || hash.toString() == '#videos'){
+        $('nav a'+hash).click();
+    }
+});
+//create search variable thingo
 var playerNames = FuzzySet();
 //i dont know how to do xmlhttp requests so i've settled for fetch
 fetch('https://raw.githubusercontent.com/ryncmrfrd/sunderland/master/csv/players.csv')
@@ -36,9 +44,8 @@ $('#mobileCheck').change(function(){
     }
 });
 //when navigation button is clicked, call a change tabs function and remove funky red triangle
-$('nav a.clickable').on('click', function(){
+$('nav a.clickable').click(function(){
     const thisButton = this;
-    const triangleCheck = $('#homePageTriangleCheck');
     //remove triangle if it exists
     if(this.id!='home'){
         setTimeout(function(){
