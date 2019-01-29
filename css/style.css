@@ -100,6 +100,8 @@ body {
 }
 
 body.navActive{
+    max-height: 100%;
+    max-width: 100vw;
     overflow: hidden !important;
 }
 
@@ -1016,5 +1018,56 @@ header.page-home nav a.active {
         display: block;
         width: 250px;
         margin: 16px auto;
+    }
+}
+
+/*decadeapage responsive*/
+@media (min-width: 838px) {
+    #searchMobile{
+        display: none;
+    }
+}
+@media (min-width: 1000px) {
+    .page-decade nav{
+        margin-left: auto;
+    }
+}
+@media (max-width: 1000px) {
+    header.page-decade nav{
+        width: calc(100vw - 339px);
+        justify-content: space-around;
+    }
+}
+@media (max-width: 838px) {
+    #searchDesktop{
+        display:none;
+    }
+    #searchMobile{
+        display: block;
+    }
+    header.page-decade nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: left!important;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%!important;
+        background-color: white;
+        overflow-y: hidden;
+        z-index: 999
+    }
+    header.page-decade nav a, header.page-decade nav .search{
+        display: block;
+        text-align: center;
+        margin: 25px auto
+    }
+    header.page-decade #mobileCheck:not(:checked) + div + nav {
+        height: 0
+    }
+    header.page-decade #mobileCheck:checked + div + nav {
+        height: calc(100vh - 100px);
+        overflow-y: auto;
+        background: white
     }
 }
