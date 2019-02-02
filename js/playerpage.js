@@ -102,4 +102,3 @@ function Search(parsedcsv){
         else{$('.searchResults').html('');}
     });
 }
-//

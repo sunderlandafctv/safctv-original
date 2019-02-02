@@ -2,17 +2,12 @@
     https://sunderlandafc.tv
     written by Ryan Comerford
 */
-//click the right button with a valid hash in url
-$( document ).ready(function() {
-    var hash = window.location.hash;
-    if(hash.toString() == '#players' || hash.toString() == '#videos'){
-        $('nav a'+hash).click();
-    }
-});
-//create search variable thingo
+/*
+    LOADING CSVs
+*/
 var playerNames = FuzzySet();
 //i dont know how to do xmlhttp requests so i've settled for fetch
-fetch('https://raw.githubusercontent.com/ryncmrfrd/sunderland/master/csv/players.csv')
+fetch('https://raw.githubusercontent.com/sunderlandafctv/sunderlandafctv.github.io/master/csv/players.csv')
     .then((data) => data.text())
     .then(function(fetch) {
         Papa.parse(fetch, {
@@ -23,11 +18,33 @@ fetch('https://raw.githubusercontent.com/ryncmrfrd/sunderland/master/csv/players
                     playerNames.add( String(results.data[i].Name) );
                 }
                 //callin' functionz
-                Search(results.data);
-                PlayersTab(results.data);
+                Search(results.data)
             }
         });
     })
+//again, but with videos.csv
+fetch('https://raw.githubusercontent.com/sunderlandafctv/sunderlandafctv.github.io/master/csv/videos.csv')
+    .then((data) => data.text())
+    .then(function(fetch) {
+        Papa.parse(fetch, {
+            header: true,
+            complete: function(results) {
+                LoadDynamicContent(results.data)
+            }
+        });
+    })
+/*
+    PAGE NAVIGATION
+*/
+//click the right button with a valid hash in url
+$( document ).ready(function() {
+    var hash = window.location.hash;
+    if(hash.toString() == '#players' || hash.toString() == '#videos'){
+        $('nav a'+hash).click();
+    }
+});
+//add a jquery boolean funtion to see if an element exists in the DOM
+jQuery.fn.exists = function(){ return this.length > 0; }
 //when mobile navigation page active allow/deny scrolling
 $('#mobileCheck').change(function(){
     const nav = $('nav');
@@ -44,10 +61,14 @@ $('#mobileCheck').change(function(){
     }
 });
 //when navigation button is clicked, call a change tabs function and remove funky red triangle
-$('nav a.clickable').click(function(){
+$('nav a.clickable').on('click', function(){
     const thisButton = this;
+    const triangleCheck = $('#homePageTriangleCheck');
     //remove triangle if it exists
     if(this.id!='home'){
+        if($('#homePageTriangleCheck').exists()){
+            triangleCheck.prop("checked", true);
+        }
         setTimeout(function(){
             $('header').removeClass('headerHome');
             changeTabs(thisButton)
@@ -55,6 +76,9 @@ $('nav a.clickable').click(function(){
     }
     else{
         changeTabs(thisButton);
+        if($('#homePageTriangleCheck').exists()){
+            triangleCheck.prop("checked", false);
+        }
     }
     if($(window).width() <= 838 ){
         //auto exit the navbar (mobile)
@@ -74,8 +98,12 @@ function changeTabs(x){
     $('nav').removeClass('active');
     $('body').unbind('touchmove');
 }
-//c'est cool outline around the search bar on focus. now with fades
-$('#searchInput').focus(function(){$('.search').addClass('focus');});
+/*
+    SEARCH BAR
+*/
+$('#searchInput').focus(function(){
+    $('.search').addClass('focus');
+});
 $('#searchInput').focusout(function(){
     $('.search').removeClass('focus');
     $('#searchInput').val('');
@@ -90,11 +118,41 @@ function Search(parsedcsv){
     searchInput.keyup(function(){
         if(playerNames.get(searchInput.val())){
             var fuzzyresult = playerNames.get(searchInput.val())[0][1];
-            console.log(fuzzyresult)
             $('.searchResults').html(fuzzyresult);
-            console.log($('.searchResults').html())
-            $('.searchResults').attr('href','../player?ID='+parsedcsv.filter(data => data.Name === fuzzyresult)[0].ID);
+            $('.searchResults').attr('href','../player.html?ID='+parsedcsv.filter(data => data.Name === fuzzyresult)[0].ID);
         }
         else{$('.searchResults').html('');}
     });
+}
+/*
+    GENERATE DYNAMIC CONTENT
+*/
+//load the dynamic content based on url ID query
+function LoadDynamicContent(videocsv){
+    var testurl = window.location.pathname;
+    var filename = testurl.substring(testurl.lastIndexOf('/')+1).substring(0,4);
+    if(filename.substring(0,2) == 19){
+        filename = filename+'s';
+    }
+    var videosData = videocsv.filter(data => data.Season === filename)[0];
+    if(videosData==undefined){
+        console.error('incorrect id query');
+        $('body').html(
+            '<div class="flex h-center column" style="height: 80vh">'+
+                '<h1 class="text-center accent" style="font-size: 100px; margin: 0;">Error</h1>'+
+                '<p class="text-center">Something went wrong. Sorry.</p>'+
+            '</div>'
+        );
+    }
+    else{
+        for(var i=1;i<videocsv.length-1; i++){
+            if(videocsv[i].Season == filename){
+                $('section#videos').append(
+				    '<article class="w-half">'+
+					    '<iframe src="https://www.youtube.com/embed/'+videocsv[i].Link.substring(videocsv[i].Link.lastIndexOf("/") + 1, videocsv[i].Link.length)+'"></iframe>'+
+					'</article>'
+                );
+            }
+        }
+    }
 }

@@ -1020,13 +1020,6 @@ header.page-home nav a.active {
         margin: 16px auto;
     }
 }
-
-/*decadeapage responsive*/
-@media (min-width: 838px) {
-    #searchMobile{
-        display: none;
-    }
-}
 @media (min-width: 1000px) {
     .page-decade nav{
         margin-left: auto;
@@ -1039,12 +1032,6 @@ header.page-home nav a.active {
     }
 }
 @media (max-width: 838px) {
-    #searchDesktop{
-        display:none;
-    }
-    #searchMobile{
-        display: block;
-    }
     header.page-decade nav {
         display: flex;
         flex-direction: column;

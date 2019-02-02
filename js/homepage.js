@@ -2,6 +2,9 @@
 * https://sunderlandafc.tv
 * written by Ryan Comerford
 */
+/*
+    PAGE NAVIGATION
+*/
 //add a jquery boolean funtion to see if an element exists in the DOM
 jQuery.fn.exists = function(){ return this.length > 0; }
 //when mobile navigation page active allow/deny scrolling
@@ -58,6 +61,9 @@ function changeTabs(x){
     $('nav').removeClass('active');
     $('body').unbind('touchmove');
 }
+/*
+    HREF CHANGING
+*/
 //go to the correct player page when clicking a player button
 function changePagePlayer(query){
     if(query != null){window.location.href = 'player?ID=' + query;}
