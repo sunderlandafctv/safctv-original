@@ -30,7 +30,7 @@ $('nav a.clickable').on('click', function(){
     //remove triangle if it exists
     if(this.id!='home'){
         if($('#homePageTriangleCheck').exists()){
-            triangleCheck.prop("checked", true);
+            triangleCheck.prop('checked', true);
         }
         setTimeout(function(){
             $('header').removeClass('headerHome');
@@ -40,14 +40,14 @@ $('nav a.clickable').on('click', function(){
     else{
         changeTabs(thisButton);
         if($('#homePageTriangleCheck').exists()){
-            triangleCheck.prop("checked", false);
+            triangleCheck.prop('checked', false);
         }
     }
     if($(window).width() <= 838 ){
         //auto exit the navbar (mobile)
         $('body').removeClass('navActive');
         setTimeout(function(){
-            $('#mobileCheck').prop("checked", false);
+            $('#mobileCheck').prop('checked', false);
         },150);
     }
 });

@@ -402,7 +402,7 @@ button {
 
 .ripple:after,
 button:after {
-    content: "";
+    content: '';
     display: block;
     position: absolute;
     width: 100%;
@@ -547,7 +547,7 @@ div.loader {
 }
 
 div.loader:after {
-    content: " ";
+    content: ' ';
     display: block;
     width: 46px;
     height: 46px;
@@ -659,31 +659,31 @@ header.page-home nav a.active {
     opacity: 0
 }
 
-.fadingImages [class="1"] {
+.fadingImages [class='1'] {
     object-fit: scale-down;
     animation-delay: 0s;
     background: url(../bin/Logos/1.png) center / cover
 }
 
-.fadingImages [class="2"] {
+.fadingImages [class='2'] {
     object-fit: scale-down;
     animation-delay: 6s;
     background: url(../bin/Logos/2.png) center / cover
 }
 
-.fadingImages [class="3"] {
+.fadingImages [class='3'] {
     object-fit: scale-down;
     animation-delay: 12s;
     background: url(../bin/Logos/3.png) center / cover
 }
 
-.fadingImages [class="4"] {
+.fadingImages [class='4'] {
     object-fit: scale-down;
     animation-delay: 18s;
     background: url(../bin/Logos/4.png) center / cover
 }
 
-.fadingImages [class="5"] {
+.fadingImages [class='5'] {
     object-fit: scale-down;
     animation-delay: 24s;
     background: url(../bin/Logos/5.png) center / cover
@@ -749,10 +749,16 @@ header.page-home nav a.active {
     margin: 6.5px auto;
 }
 
+#embededVideo{
+    display: inline-block;
+    margin: 25px 2.5%;
+    width: 45%;
+}
+
 /*general responsive*/
 @media (max-width:250px) {
-    #visibleScreen {
-        display: none
+    #visibleScreen, footer {
+        display: none !important
     }
     #tooSmallScreen {
         display: block
@@ -832,7 +838,7 @@ header.page-home nav a.active {
     }
     .hamburger-inner::before,
     .hamburger-inner::after {
-        content: "";
+        content: '';
         display: block
     }
     .hamburger-inner::before {
@@ -1019,6 +1025,11 @@ header.page-home nav a.active {
         width: 250px;
         margin: 16px auto;
     }
+    #embededVideo{
+        display: inline-block;
+        margin: 15px 1%;
+        width: 98%;
+    }
 }
 @media (min-width: 1000px) {
     .page-decade nav{
@@ -1029,6 +1040,11 @@ header.page-home nav a.active {
     header.page-decade nav{
         width: calc(100vw - 339px);
         justify-content: space-around;
+    }
+    #embededVideo{
+        display: inline-block;
+        margin: 25px 5%;
+        width: 90%;
     }
 }
 @media (max-width: 838px) {
