@@ -754,6 +754,9 @@ header.page-home nav a.active {
     margin: 25px 2.5%;
     width: 45%;
 }
+#embededVideo iframe{
+    padding-top: 10px;
+}
 
 /*general responsive*/
 @media (max-width:250px) {

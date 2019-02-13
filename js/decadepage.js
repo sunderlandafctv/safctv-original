@@ -3,7 +3,7 @@
     written by Ryan Comerford
 */
 //universal variable for file name
-var testurl=window.location.pathname;var filename=testurl.substring(testurl.lastIndexOf('/')+1).substring(0,4);if(filename.substring(0,2)==19){filename=filename+'s'}console.log('Decade: '+filename)
+var testurl=window.location.pathname;var filename=testurl.substring(testurl.lastIndexOf('/')+1).substring(0,4);if(filename.substring(0,2)==19){filename=filename+'s'}
 //create search array
 var playerNames = FuzzySet();
 //click the right button with a valid hash in url
@@ -92,6 +92,7 @@ $('#mobileCheck').change(function() {
 });
 //when navigation button is clicked, call a change tabs function and remove funky red triangle
 $('nav a.clickable').on('click', function() {
+    console.log('teey')
     const thisButton = this;
     //remove triangle if it exists
     changeTabs(thisButton)
