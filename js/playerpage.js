@@ -38,7 +38,7 @@ function LoadPlayerContent(playercsv) {
     success: function(results) {
         $.each(results.items, function(i){
             var playlist = results.items[i];
-            /*if(!playerData){
+            if(!playerData){
                 $('#visibleScreen').html(
                     '<div class="flex h-center column" style="height: 80vh">' +
                         '<h1 class="text-center accent" style="font-size: 150px; margin: 0;">404</h1>' +
@@ -46,7 +46,7 @@ function LoadPlayerContent(playercsv) {
                         '<p class="text-center"><a class="label accent" href="/">take me home</a></p>'+
                     '</div>'
                 );
-            }*/
+            }
             if(playerData && playlist.snippet.title == playerData.Name){
                 $.ajax({
                     type: "GET",
@@ -70,7 +70,7 @@ function LoadPlayerContent(playercsv) {
                             $(document).attr('title', playerData.Name + ' - SunderlandAFC.TV');
                             $('#playerName').html('<strong class="accent">' + playerData.Name + '</strong> (' + playerData['Years '] + ')');
                             $('#playerDescription').html(playerData.Overview);
-                            $('#playerImage').attr('src', playerData.Picture);
+                            $('#playerImage').attr('src', 'bin/'+playerData.ID);
                             $('#playerGames').html(playerData.Appearances);
                             $('#playerGoals').html(playerData.Goals);
                             $('#playerDecadesLink').attr('href', 'decades/' + playerData.Decade + '.html').html(playerData.Decade + "'s");
