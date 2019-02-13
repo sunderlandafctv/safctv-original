@@ -70,7 +70,7 @@ function LoadPlayerContent(playercsv) {
                             $(document).attr('title', playerData.Name + ' - SunderlandAFC.TV');
                             $('#playerName').html('<strong class="accent">' + playerData.Name + '</strong> (' + playerData['Years '] + ')');
                             $('#playerDescription').html(playerData.Overview);
-                            $('#playerImage').attr('src', 'bin/Players/'+playerData.ID);
+                            $('#playerImage').attr('src', 'bin/Players/'+playerData.ID+'.png');
                             $('#playerGames').html(playerData.Appearances);
                             $('#playerGoals').html(playerData.Goals);
                             $('#playerDecadesLink').attr('href', 'decades/' + playerData.Decade + '.html').html(playerData.Decade + "'s");
