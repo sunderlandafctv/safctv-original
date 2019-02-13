@@ -15,7 +15,7 @@
 			var loading_screen = pleaseWait({
 			    logo: 'bin/Logos/1.png',
 			    backgroundColor: '#EB172B',
-			    loadingHtml: '<div class='loader'></div>'
+			    loadingHtml: '<div class="loader"></div>'
 			});
 		</script>
 		<noscript>
@@ -56,32 +56,24 @@
 					</div>
 				</article>
 			</div>
-			<div class='flex h-spacearound w-three-quarters' style='margin: 0 auto;'>
-				<article class='w-half'>
-					<h1>Goal of the Month</h1>
-					<iframe src='https://www.youtube.com/embed/FHI-Tr3CVxw'></iframe>
-				</article>
-				<article class='w-half'>
-					<h1>Game of the Month</h1>
-					<iframe src='https://www.youtube.com/embed/ysDg9JodQnY'></iframe>
-				</article>
+			<h1 class="text-center">Watch videos of <b class="accent" id="watchVideos"></b></h1>
+			<div style='margin: 0 auto;' id="playerVideos">
 			</div>
+			<footer class='flex h-center v-center w-full h-150 column absolute'>
+				<a href='https://ryncmrfrd.me' class='label text-center'>
+				<i class='icon code'></i> with <i class='icon heart accent'></i> by  Ryan Comerford
+				</a>
+				<span class='label text-center'>
+					If you know of any other vintage Sunderland footage contact us at 
+					<a href='mailto:hello@sunderlandafc.tv' target='_blank'>hello@sunderlandafc.tv</a><br>
+					<div class='flex h-spacearound' style='margin: 10px 0 5px 0;' id='socialLinks'>
+						<a id='facebook' href='https://go.sunderlandafc.tv/facebook'><i class='icon facebook'></i></a>
+						<a id='twitter' href='https://go.sunderlandafc.tv/twitter'><i class='icon twitter'></i></a>
+						<a id='youtube' href='https://go.sunderlandafc.tv/youtube'><i class='icon youtube'></i></a>
+					</div>
+				</span>
+			</footer>
 		</main>
-		<div style='margin-bottom: 60vh'></div>
-		<footer class='flex h-center v-center w-full h-150 column absolute'>
-			<a href='https://ryncmrfrd.me' class='label text-center'>
-			<i class='icon code'></i> with <i class='icon heart accent'></i> by  Ryan Comerford
-			</a>
-			<span class='label text-center'>
-				If you know of any other vintage Sunderland footage contact us at 
-				<a href='mailto:hello@sunderlandafc.tv' target='_blank'>hello@sunderlandafc.tv</a><br>
-				<div class='flex h-spacearound' style='margin: 10px 0 5px 0;' id='socialLinks'>
-					<a id='facebook' href='https://go.sunderlandafc.tv/facebook'><i class='icon facebook'></i></a>
-					<a id='twitter' href='https://go.sunderlandafc.tv/twitter'><i class='icon twitter'></i></a>
-					<a id='youtube' href='https://go.sunderlandafc.tv/youtube'><i class='icon youtube'></i></a>
-				</div>
-			</span>
-		</footer>
 		<script src='https://code.jquery.com/jquery-3.3.1.min.js' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.3/papaparse.min.js' integrity='sha256-1KCNEBmmUm8Oo4IOlg7ZnbFjBZXxCa9bILP7eGDqYOY=' crossorigin='anonymous'></script>
 		<script src='https://cdn.bootcss.com/fuzzyset.js/0.0.8/fuzzyset.min.js'></script>
