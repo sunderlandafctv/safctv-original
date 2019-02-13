@@ -3,7 +3,7 @@
     written by Ryan Comerford
 */
 //universal variable for file name
-var testurl=window.location.pathname;var filename=testurl.substring(testurl.lastIndexOf('/')+1).substring(0,4);if(filename.substring(0,2)==19){filename=filename+'s'}
+var testurl=window.location.pathname;var filename=testurl.substring(testurl.lastIndexOf('/')+1).substring(0,4);if(filename.substring(0,2)==19){filename=filename+'s';}
 //create search array
 var playerNames = FuzzySet();
 //click the right button with a valid hash in url
@@ -22,11 +22,20 @@ $.ajax({
         Papa.parse(msg, {
             header: true,
             complete: function(results) {
-                //create an array for search function later
-                for (var i = 0; i < results.data.length - 1; i++) {
+                $.each(results.data, function(i){
+                    var playerI = results.data[i]
                     playerNames.add(String(results.data[i].Name));
-                }
-                //callin' functionz
+                    if(playerI.Decade == filename.replace('s','')){
+                        console.log(playerI);
+                        $('section#players').append(
+                            '<button class="w-third" onclick="changePagePlayer('+playerI.ID+')" id="homePlayersCard" style="margin: 25px 8.33%;">'+
+						        '<img id="playerCardImg" class="left" src="../bin/Players/'+playerI.ID+'.png" style="margin: 5px 10px 10px 10px">'+
+						        '<h1 class="center">'+playerI.Name.split(' ')[0]+'<br>'+playerI.Name.split(' ')[1]+'</h1>'+
+						        '<span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">Player from '+playerI['Years ']+'</span>'+
+					        '</button>'
+                        );
+                    }
+                })
                 Search(results.data);
             }
         });
@@ -44,7 +53,6 @@ $.ajax({
     success: function(results) {
         $.each(results.items, function(i){
             var playlist = results.items[i];
-            console.log(playlist.snippet.title + filename);
             if(playlist.snippet.title.replace("'", '') == filename || (playlist.snippet.title == 'Pre WW1' && filename == 'PWW1') || (playlist.snippet.title == 'Pre WW2' && filename == 'PWW2')){
                 $.ajax({
                     type: "GET",
@@ -92,7 +100,6 @@ $('#mobileCheck').change(function() {
 });
 //when navigation button is clicked, call a change tabs function and remove funky red triangle
 $('nav a.clickable').on('click', function() {
-    console.log('teey')
     const thisButton = this;
     //remove triangle if it exists
     changeTabs(thisButton)
@@ -133,9 +140,13 @@ function Search(parsedcsv) {
         if (playerNames.get(searchInput.val())) {
             var fuzzyresult = playerNames.get(searchInput.val())[0][1];
             $('.searchResults').html(fuzzyresult);
-            $('.searchResults').attr('href', '../player.html?ID=' + parsedcsv.filter(data => data.Name === fuzzyresult)[0].ID);
+            $('.searchResults').attr('href', '../player?ID=' + parsedcsv.filter(data => data.Name === fuzzyresult)[0].ID);
         } else {
             $('.searchResults').html('');
         }
     });
+}
+//go to the correct player page when clicking a player button
+function changePagePlayer(query){
+    if(query != null){window.location.href = '../player?ID=' + query;}
 }
