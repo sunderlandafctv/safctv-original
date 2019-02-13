@@ -38,7 +38,7 @@ function LoadPlayerContent(playercsv) {
     success: function(results) {
         $.each(results.items, function(i){
             var playlist = results.items[i];
-            if(!playerData){
+            /*if(!playerData){
                 $('#visibleScreen').html(
                     '<div class="flex h-center column" style="height: 80vh">' +
                         '<h1 class="text-center accent" style="font-size: 150px; margin: 0;">404</h1>' +
@@ -46,8 +46,8 @@ function LoadPlayerContent(playercsv) {
                         '<p class="text-center"><a class="label accent" href="/">take me home</a></p>'+
                     '</div>'
                 );
-            }
-            if(playlist.snippet.title == playerData.Name){
+            }*/
+            if(playerData && playlist.snippet.title == playerData.Name){
                 $.ajax({
                     type: "GET",
                     url: "https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyDBs9KZOutpxzd-_fNSUAl-nj0rW01XXJI",
