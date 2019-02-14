@@ -117,6 +117,6 @@ function Search(parsedcsv){
 function checkVideos(){
     if(loadedVideos == false){
         $('#ifVideos').html('No videos availible. <b class="accent">Sorry about that.</b>');
-        $('footer').css({'position':'absolute','bottom':'0'});
+        $('footer').css('margin-top','40vh');
     }
 }
