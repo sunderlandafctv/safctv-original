@@ -60,6 +60,7 @@ function LoadPlayerContent(playercsv) {
         $.each(results.items, function(i){
             var playlist = results.items[i];
             if(playlist.snippet.title == playerData.Name){
+                loadedVideos = true;
                 $.ajax({
                     type: "GET",
                     url: "https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyDBs9KZOutpxzd-_fNSUAl-nj0rW01XXJI",
@@ -70,7 +71,6 @@ function LoadPlayerContent(playercsv) {
                     },
                     success: function(results) {
                         $('#watchVideos').text(playerData.Name);
-                        loadedVideos = true;
                         $.each(results.items, function(i){
                             $('#playerVideos').append(
                                 '<article id="embededVideo">'+
@@ -78,16 +78,13 @@ function LoadPlayerContent(playercsv) {
                                 '</article>'
                             );
                         });
-                        if(loadedVideos == false){
-                            console.log('loadedVideos');
-                            $('#ifVideos').html('No videos availible. <b class="accent  ">Sorry about that.</b>');
-                            $('footer').css({'position':'absolute','bottom':'0'});
-                        }
                     },
                     error: function(error){alert("Something's gone wrong :(");console.error('Error: '+error.responseJSON.error.message);}
                 });
             }
         });
+        console.log(loadedVideos)
+        checkVideos();
     },
     error: function(error){alert("Something's gone wrong :(");console.error('Error: '+error.responseJSON.error.message);}
 });}
@@ -119,7 +116,7 @@ function Search(parsedcsv){
 //checked videos
 function checkVideos(){
     if(loadedVideos == false){
-        $('#ifVideos').html('No videos availible. <b class="accent">Sorry about that.</b>').css({'position':'absolute','bottom':'0'});
+        $('#ifVideos').html('No videos availible. <b class="accent">Sorry about that.</b>');
         $('footer').css({'position':'absolute','bottom':'0'});
     }
 }

@@ -11,7 +11,7 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/please-wait/0.0.5/please-wait.min.js' integrity='sha256-VdpyBKkQpTaeKm6ZDxHfYXrnZKY6J+uMp0Ok1wq4Nn4=' crossorigin='anonymous'></script>
 </head>
 
-<body onload='loading_screen.finish(); checkVideos();'>
+<body onload='loading_screen.finish();'>
     <script>
         var loading_screen = pleaseWait({
         			    logo: 'bin/Logos/1.png',
@@ -59,7 +59,7 @@
         <h1 id="ifVideos" class="text-center">Watch <b class="accent" id="watchVideos"></b> in action</h1>
         <div style='margin: 0 auto;' id="playerVideos">
         </div>
-        <footer class='flex h-center v-center w-full h-150 column absolute'>
+        <footer class='flex h-center v-center w-full h-150 column'>
             <a href='https://ryncmrfrd.me' class='label text-center'>
 				<i class='icon code'></i> with <i class='icon heart accent'></i> by  Ryan Comerford
 				</a>
