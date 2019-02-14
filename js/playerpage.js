@@ -79,7 +79,7 @@ function LoadPlayerContent(playercsv) {
                             );
                         });
                         if(loadedVideos == false){
-                            console.log(loadedVideos)
+                            console.log('loadedVideos');
                             $('#ifVideos').html('No videos availible. <b class="accent  ">Sorry about that.</b>');
                             $('footer').css({'position':'absolute','bottom':'0'});
                         }
@@ -115,4 +115,11 @@ function Search(parsedcsv){
             $('.searchResults').html('');
         }
     });
+}
+//checked videos
+function checkVideos(){
+    if(loadedVideos == false){
+        $('#ifVideos').html('No videos availible. <b class="accent  ">Sorry about that.</b>');
+        $('footer').css({'position':'absolute','bottom':'0'});
+    }
 }
