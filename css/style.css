@@ -367,6 +367,10 @@ iframe {
     background-image: url(../bin/icons/youtube.svg)
 }
 
+.icon.home{
+    background-image: url(../bin/icons/home.svg)
+}
+
 .flag.English {
     background-image: url(../bin/icons/england.svg)
 }
@@ -758,6 +762,24 @@ header.page-home nav a.active {
     padding-top: 10px;
 }
 
+#decadePlayersCard{
+    width: 30%;
+    margin: 20px 1.66% !important;
+}
+
+@media only screen and (max-width:1155px) {
+    #decadePlayersCard{
+        width: 45%;
+        margin: 20px 2.5% !important;
+    }
+    #recomendedVideos{
+        justify-content: center;
+    }
+    #recomendedVideos article{
+        width: 45vw;
+    }
+}
+
 /*general responsive*/
 @media (max-width:250px) {
     #visibleScreen, footer {
@@ -775,6 +797,12 @@ header.page-home nav a.active {
 @media only screen and (max-width:643px) {
     footer span {
         width: 90%!important
+    }
+    #recomendedVideos{
+        flex-wrap: wrap;
+    }
+    #recomendedVideos article{
+        width: 90vw;
     }
 }
 /*home page responsive*/
@@ -918,6 +946,10 @@ header.page-home nav a.active {
         height: 100%;
         margin: 0 auto
     }
+    #decadePlayersCard{
+        width: 70%;
+        margin: 20px 15% !important;
+    }
 }
 @media (max-width:700px) {
     #playerTabHalf{
@@ -944,6 +976,10 @@ header.page-home nav a.active {
     }
     #homeWelcomeCard {
         margin-top: 0!important
+    }
+    #decadePlayersCard{
+        width: 90%;
+        margin: 20px 5% !important;
     }
 }
 @media (max-width:589px) {
@@ -992,6 +1028,20 @@ header.page-home nav a.active {
 @media (max-width:650px) {
     header.page-player h1 a:before{
         content: 'SAFC';
+    }
+    #decadePlayersCard{
+        height: 280px;
+    }
+    #decadePlayersCard img{
+        margin: 0 auto;
+        float: none;
+    }
+    #decadePlayersCard h1{
+        margin: 10px auto 15px auto;
+        float: none;
+    }
+    #decadePlayersCard span{
+        padding: 5px !important;
     }
 }
 @media (max-width:530px) {

@@ -2,6 +2,9 @@
     https://sunderlandafc.tv
     written by Ryan Comerford
 */
+//random number generator
+function generateRandomNumber(min,max){let random_number=Math.random()*(max-min)+min;return Math.floor(random_number)}
+function randomElementInArray(array){return array[generateRandomNumber(0,array.length)]}
 //universal variable for file name
 var testurl=window.location.pathname;var filename=testurl.substring(testurl.lastIndexOf('/')+1).substring(0,4);if(filename.substring(0,2)==19){filename=filename+'s';}
 //create search array
@@ -26,12 +29,11 @@ $.ajax({
                     var playerI = results.data[i]
                     playerNames.add(String(results.data[i].Name));
                     if(playerI.Decade == filename.replace('s','')){
-                        console.log(playerI);
                         $('section#players').append(
-                            '<button class="w-third" onclick="changePagePlayer('+playerI.ID+')" id="homePlayersCard" style="margin: 25px 8.33%;">'+
+                            '<button onclick="changePagePlayer('+playerI.ID+')" id="decadePlayersCard" style="margin: 25px 8.33%;">'+
 						        '<img id="playerCardImg" class="left" src="../bin/Players/'+playerI.ID+'.png" style="margin: 5px 10px 10px 10px">'+
 						        '<h1 class="center">'+playerI.Name.split(' ')[0]+'<br>'+playerI.Name.split(' ')[1]+'</h1>'+
-						        '<span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">Player from '+playerI['Years ']+'</span>'+
+						        '<span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">Played from '+playerI['Years ']+'</span>'+
 					        '</button>'
                         );
                     }
@@ -70,6 +72,7 @@ $.ajax({
                                 '</article>'
                             );
                         });
+                        $('#recommendedVideo').append('<iframe src="https://www.youtube.com/embed/'+randomElementInArray(results.items).snippet.resourceId.videoId+'"></iframe>');
                     },
                     error: function(error){alert("Something's gone wrong :(");console.error('Error: '+error.responseJSON.error.message);}
                 });

@@ -43,7 +43,7 @@ function LoadPlayerContent(playercsv) {
                     '<div class="flex h-center column" style="height: 80vh">' +
                         '<h1 class="text-center accent" style="font-size: 150px; margin: 0;">404</h1>' +
                         '<p class="text-center">The player your equested was not found.</p>' +
-                        '<p class="text-center"><a class="label accent" href="/">take me home</a></p>'+
+                        '<p class="text-center"><a class="label accent" href="/"><span class="icon home"></span> Home</a></p>'+
                     '</div>'
                 );
             }

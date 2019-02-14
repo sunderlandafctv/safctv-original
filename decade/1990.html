@@ -1,69 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>1990s - SUNDERLANDAFC.TV</title>
-		<link rel='icon' href='../bin/favicon.ico' type='image/x-icon'>
-		<link rel="stylesheet" href="../css/style.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/please-wait/0.0.5/please-wait.min.css" integrity="sha256-+EVukertp+JNXktfbiOXsUjvPcnHOkkNkPixeI9mg1o=" crossorigin="anonymous" />
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/please-wait/0.0.5/please-wait.min.js" integrity="sha256-VdpyBKkQpTaeKm6ZDxHfYXrnZKY6J+uMp0Ok1wq4Nn4=" crossorigin="anonymous"></script>
-	</head>
-	<body onload="loading_screen.finish();">
-		<script>
-			var loading_screen = pleaseWait({
-			    logo: "../bin/Logos/1.png",
-			    backgroundColor: '#EB172B',
-			    loadingHtml: "<div class='loader'></div>"
-			});
-		</script>
-		<noscript>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1990s - SUNDERLANDAFC.TV</title>
+    <link rel='icon' href='../bin/favicon.ico' type='image/x-icon'>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/please-wait/0.0.5/please-wait.min.css" integrity="sha256-+EVukertp+JNXktfbiOXsUjvPcnHOkkNkPixeI9mg1o=" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/please-wait/0.0.5/please-wait.min.js" integrity="sha256-VdpyBKkQpTaeKm6ZDxHfYXrnZKY6J+uMp0Ok1wq4Nn4=" crossorigin="anonymous"></script>
+</head>
+
+<body onload="loading_screen.finish();">
+    <script>
+        var loading_screen = pleaseWait({
+        			    logo: "../bin/Logos/1.png",
+        			    backgroundColor: '#EB172B',
+        			    loadingHtml: "<div class='loader'></div>"
+        			});
+    </script>
+    <noscript>
 			<h1 class="w-full h-full" style="margin: 0; padding: 10px; position: absolute; top: 0; left: 0; z-index: 9999; background: white;"><strong class="accent">no javascsript support detected, </strong>please enable it or access this site from a computer.</h1>
 		</noscript>
-		<div class="w-full" id="tooSmallScreen">
-			<h1 class="w-full" style="margin-left: 10px;"><strong class="accent">your device is too small, </strong>please access this site from a computer.</h1>
-		</div>
-		<main id="visibleScreen">
-			<header class="flex v-center w-full h-100 page-decade">
-				<h1 class="inline" style="margin-left: 10px"><a class="accent h-full" href="/"></a>.TV</h1>
-				<div id="mobileHamburger"><label class="pseudo" for="mobileCheck"><span></span><span></span><span></span></label></div>
-				<input type="checkbox" id="mobileCheck">
-				<div id="mobileHamburger">
-					<label for="mobileCheck" class="hamburger">
+    <div class="w-full" id="tooSmallScreen">
+        <h1 class="w-full" style="margin-left: 10px;"><strong class="accent">your device is too small, </strong>please access this site from a computer.</h1>
+    </div>
+    <main id="visibleScreen">
+        <header class="flex v-center w-full h-100 page-decade">
+            <h1 class="inline" style="margin-left: 10px"><a class="accent h-full" href="/"></a>.TV</h1>
+            <div id="mobileHamburger"><label class="pseudo" for="mobileCheck"><span></span><span></span><span></span></label></div>
+            <input type="checkbox" id="mobileCheck">
+            <div id="mobileHamburger">
+                <label for="mobileCheck" class="hamburger">
 					<span class="hamburger-box">
 					<span class="hamburger-inner"></span>
 					</span>
 					</label>
-				</div>
-				<nav class="flex h-spacebetween v-center right w-half h-full" style="transition: color 0.2s, background-color 0.2s;">
-					<a id="home" class="clickable active">Home</a>
-					<a id="players" class="clickable">Players</a>
-					<a id="videos" class="clickable">Videos</a>
-					<div class="search">
-						<input type="text" id="searchInput" placeholder="Search players ...">
-						<a href="#">
+            </div>
+            <nav class="flex h-spacebetween v-center right w-half h-full" style="transition: color 0.2s, background-color 0.2s;">
+                <a id="home" class="clickable active">Home</a>
+                <a id="players" class="clickable">Players</a>
+                <a id="videos" class="clickable">Videos</a>
+                <div class="search">
+                    <input type="text" id="searchInput" placeholder="Search players ...">
+                    <a href="#">
 						<i class="fas fa-search"></i>
 						</a>
-						<div class="flex h-center">
-							<p style="margin: 0;"><a class="searchResults" href="#" style="margin: 10px;"></a></p>
-						</div>
-					</div>
-				</nav>
-			</header>
-			<section id="home" class="active">
-				<h1>home</h1>
-			</section>
-			<section id="players">
-				<h1>players</h1>
-			</section>
-			<section id="videos">
-			</section>
-		</main>
-		<footer class="flex h-center v-center w-full h-150 column absolute">
-			<a href="https://ryncmrfrd.me" class="label text-center">
+                    <div class="flex h-center">
+                        <p style="margin: 0;"><a class="searchResults" href="#" style="margin: 10px;"></a></p>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section id="home" class="active">
+            <h1 class="text-center">Recommended Video</h1>
+            <div class="flex h-spacearound w-three-quarters h-half" id="recomendedVideos">
+                <article class="w-half" id="recommendedVideo"> </article>
+            </div>
+
+        </section>
+        <section id="players">
+
+        </section>
+        <section id="videos">
+        </section>
+    </main>
+    <footer class="flex h-center v-center w-full h-150 column absolute">
+        <a href="https://ryncmrfrd.me" class="label text-center">
 			<i class="icon code"></i> with <i class="icon heart accent"></i> by  Ryan Comerford
 			</a>
-			<span class="label text-center">
+        <span class="label text-center">
 				If you know of any other vintage Sunderland footage contact us at 
 				<a href="mailto:hello@sunderlandafc.tv" target="_blank">hello@sunderlandafc.tv</a><br>
 				<div class="flex h-spacearound" style="margin: 10px 0 5px 0;" id="socialLinks">
@@ -72,10 +78,11 @@
 					<a id="youtube" href="https://go.sunderlandafc.tv/youtube"><i class="icon youtube"></i></a>
 				</div>
 			</span>
-		</footer>
-		<script src="../js/jquery-3.3.1.min.js" ></script>
-		<script src="../js/papaparse.min.js" ></script>
-		<script src="../js/fuzzyset.min.js"></script>
-		<script src="../js/decadepage.js"></script>
-	</body>
+    </footer>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/papaparse.min.js"></script>
+    <script src="../js/fuzzyset.min.js"></script>
+    <script src="../js/decadepage.js"></script>
+</body>
+
 </html>
