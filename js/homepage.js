@@ -5,6 +5,7 @@
 /*
     PAGE NAVIGATION
 */
+$('#homePageTriangleCheck').prop('checked', false);
 //add a jquery boolean funtion to see if an element exists in the DOM
 jQuery.fn.exists = function(){ return this.length > 0; }
 //when mobile navigation page active allow/deny scrolling
