@@ -1,5 +1,7 @@
 var playerNames = FuzzySet();
 const token = 'AIzaSyDBs9KZOutpxzd-_fNSUAl-nj0rW01XXJI';
+var loadedVideos = false;
+
 //get player.csv from google drive
 $.ajax({
     type: 'GET',
@@ -36,8 +38,6 @@ function LoadPlayerContent(playercsv) {
             'part': 'snippet,contentDetails'
     },
     success: function(results) {
-        $.each(results.items, function(i){
-            var playlist = results.items[i];
             if(!playerData){
                 $('#visibleScreen').html(
                     '<div class="flex h-center column" style="height: 80vh">' +
@@ -47,7 +47,19 @@ function LoadPlayerContent(playercsv) {
                     '</div>'
                 );
             }
-            if(playerData && playlist.snippet.title == playerData.Name){
+            else if(playerData){
+                $(document).attr('title', playerData.Name + ' - SunderlandAFC.TV');
+                $('#playerName').html('<strong class="accent">' + playerData.Name + '</strong> (' + playerData['Years '] + ')');
+                $('#playerDescription').html(playerData.Overview);
+                $('#playerImage').attr('src', 'bin/Players/'+playerData.ID+'.png');
+                $('#playerGames').html(playerData.Appearances);
+                $('#playerGoals').html(playerData.Goals);
+                $('#playerDecadesLink').attr('href', 'decades/' + playerData.Decade + '.html').html(playerData.Decade + "'s");
+                $('#playerStatsLink').attr('href', playerData.Statistics)
+            }
+        $.each(results.items, function(i){
+            var playlist = results.items[i];
+            if(playlist.snippet.title == playerData.Name){
                 $.ajax({
                     type: "GET",
                     url: "https://www.googleapis.com/youtube/v3/playlistItems?key=AIzaSyDBs9KZOutpxzd-_fNSUAl-nj0rW01XXJI",
@@ -58,6 +70,7 @@ function LoadPlayerContent(playercsv) {
                     },
                     success: function(results) {
                         $('#watchVideos').text(playerData.Name);
+                        loadedVideos = true;
                         $.each(results.items, function(i){
                             $('#playerVideos').append(
                                 '<article id="embededVideo">'+
@@ -65,16 +78,10 @@ function LoadPlayerContent(playercsv) {
                                 '</article>'
                             );
                         });
-                        console.log('yeet'+playerData == undefined)
-                        if (playerData) {
-                            $(document).attr('title', playerData.Name + ' - SunderlandAFC.TV');
-                            $('#playerName').html('<strong class="accent">' + playerData.Name + '</strong> (' + playerData['Years '] + ')');
-                            $('#playerDescription').html(playerData.Overview);
-                            $('#playerImage').attr('src', 'bin/Players/'+playerData.ID+'.png');
-                            $('#playerGames').html(playerData.Appearances);
-                            $('#playerGoals').html(playerData.Goals);
-                            $('#playerDecadesLink').attr('href', 'decades/' + playerData.Decade + '.html').html(playerData.Decade + "'s");
-                            $('#playerStatsLink').attr('href', playerData.Statistics)
+                        if(loadedVideos == false){
+                            console.log(loadedVideos)
+                            $('#ifVideos').html('No videos availible. <b class="accent  ">Sorry about that.</b>');
+                            $('footer').css({'position':'absolute','bottom':'0'});
                         }
                     },
                     error: function(error){alert("Something's gone wrong :(");console.error('Error: '+error.responseJSON.error.message);}
