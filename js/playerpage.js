@@ -119,7 +119,7 @@ function Search(parsedcsv){
 //checked videos
 function checkVideos(){
     if(loadedVideos == false){
-        $('#ifVideos').html('No videos availible. <b class="accent">Sorry about that.</b>').css('color','grey');
+        $('#ifVideos').html('No videos availible. <b class="accent">Sorry about that.</b>').css({'position':'absolute','bottom':'0'});
         $('footer').css({'position':'absolute','bottom':'0'});
     }
 }
