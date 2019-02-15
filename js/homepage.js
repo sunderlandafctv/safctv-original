@@ -67,7 +67,7 @@ function changeTabs(x){
 */
 //go to the correct player page when clicking a player button
 function changePagePlayer(query){
-    if(query != null){window.location.href = 'player.html?ID=' + query;}
+    if(query != null){window.location.href = 'player?ID=' + query;}
 }
 //go to the correct player page
 function decadePage(filename){
