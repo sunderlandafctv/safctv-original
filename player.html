@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang='en'>
-
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
@@ -10,8 +9,7 @@
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/please-wait/0.0.5/please-wait.min.css' integrity='sha256-+EVukertp+JNXktfbiOXsUjvPcnHOkkNkPixeI9mg1o=' crossorigin='anonymous' />
     <script src='https://cdnjs.cloudflare.com/ajax/libs/please-wait/0.0.5/please-wait.min.js' integrity='sha256-VdpyBKkQpTaeKm6ZDxHfYXrnZKY6J+uMp0Ok1wq4Nn4=' crossorigin='anonymous'></script>
 </head>
-
-<body onload='loading_screen.finish(); checkVideos();'>
+<body onload='loading_screen.finish();'>
     <script>
         var loading_screen = pleaseWait({
         			    logo: 'bin/Logos/1.png',
@@ -59,7 +57,7 @@
         <h1 id="ifVideos" class="text-center">Watch <b class="accent" id="watchVideos"></b> in action</h1>
         <div style='margin: 0 auto;' id="playerVideos">
         </div>
-        <footer class='flex h-center v-center w-full h-150 column absolute'>
+        <footer class='flex h-center v-center w-full h-150 column'>
             <a href='https://ryncmrfrd.me' class='label text-center'>
 				<i class='icon code'></i> with <i class='icon heart accent'></i> by  Ryan Comerford
 				</a>
@@ -77,7 +75,7 @@
     <script src='js/jquery-3.3.1.min.js'></script>
     <script src='js/papaparse.min.js'></script>
     <script src='js/fuzzyset.min.js'></script>
-    <script src='js/playerpage.js'></script>
+    <script src='js/playerpage.min.js'></script>
 </body>
 
 </html>

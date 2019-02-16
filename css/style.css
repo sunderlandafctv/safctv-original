@@ -468,7 +468,8 @@ article p {
 
 section {
     display: none;
-    height: auto
+    height: auto;
+    min-height: calc(100vh - 100px - 150px)
 }
 
 section.active {
@@ -949,6 +950,9 @@ header.page-home nav a.active {
     #decadePlayersCard{
         width: 70%;
         margin: 20px 15% !important;
+    }
+    #recommendedVideo{
+        width: 90% !important;
     }
 }
 @media (max-width:700px) {
