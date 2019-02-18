@@ -312,7 +312,8 @@ a {
     color: black;
     border-radius: 3px;
     padding: 3px;
-    margin: .25em
+    margin: .25em;
+    line-height: 1.49;
 }
 
 .label.accent {
