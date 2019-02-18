@@ -3,4 +3,1160 @@
 * @author Ryan Comerford <https://ryncmrfrd.me>
 * @link https://sunderlandafc.tv
 */
-html,body,div,span,applet,object,iframe,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1;font-family:sans-serif}body.navActive{max-height:100%;max-width:100vw;overflow:hidden!important}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}.inline{display:inline-block}.w-full{width:100%}.w-three-quarters{width:75%}.w-half{width:50%}.w-quarter{width:25%}.w-third{width:33.33%}.w-fifth{width:20%}.w-tenth{width:10%}.w-500{width:500px}.w-400{width:400px}.w-300{width:300px}.w-200{width:200px}.w-100{width:100px}.h-full{height:100%}.h-three-quarters{height:75%}.h-half{height:50%}.h-quarter{height:25%}.h-fifth{height:20%}.h-tenth{height:10%}.h-500{height:500px}.h-400{height:400px}.h-300{height:300px}.h-200{height:200px}.h-150{height:150px}.h-100{height:100px}.flex{display:flex}.flex.h-left{justify-content:left}.flex.h-right{justify-content:right}.flex.h-center{justify-content:center}.flex.h-spacearound{justify-content:space-around}.flex.h-spacebetween{justify-content:space-between}.flex.v-top{align-items:top}.flex.v-center{align-items:center}.flex.v-bottom{align-items:bottom}.flex.column{flex-direction:column}.left{float:left}.right{float:right}:root{--accent:#EB172B}.accent{color:var(--accent);background:initial}.white{color:white;background:initial}.black{color:black;background:initial}a{color:var(--accent);text-decoration:none;cursor:pointer}.label{width:auto;background-color:white;color:black;border-radius:3px;padding:3px;margin:.25em}.label.accent{background-color:var(--accent);color:white}img{object-fit:cover;object-position:center;box-shadow:none;margin:0;padding:0;border-radius:5px;display:inline-block;height:144px;width:144px;margin:20px 10px 10px 10px}iframe{width:calc(100% - 20px);height:300px;padding:0 10px 10px 10px;border:none;border-radius:5px}.icon,.flag{background-size:contain;background-position:50%;background-repeat:no-repeat;display:inline-block;vertical-align:sub;width:1.25em;height:1.1em}.icon.heart{background-image:url(../bin/icons/heart.svg)}.icon.code{background-image:url(../bin/icons/code.svg)}.icon.facebook{background-image:url(../bin/icons/facebook.svg)}.icon.twitter{background-image:url(../bin/icons/twitter.svg)}.icon.youtube{background-image:url(../bin/icons/youtube.svg)}.icon.home{background-image:url(../bin/icons/home.svg)}.flag.English{background-image:url(../bin/icons/england.svg)}.flag.Scottish{background-image:url(../bin/icons/scotland.svg)}.flag.Welsh{background-image:url(../bin/icons/wales.svg)}.flag.Irish{background-image:url(../bin/Flags/ireland.svg)}.flag.Swedish{background-image:url(../bin/Flags/sweden.svg)}button>h1{font-size:30px}.ripple,button{border:none;color:black;position:relative;overflow:hidden;transform:translate3d(0,0,0)}.ripple:after,button:after{content:'';display:block;position:absolute;width:100%;height:100%;top:0;left:0;pointer-events:none;background-image:radial-gradient(circle,var(--accent) 10%,transparent 10.01%);background-repeat:no-repeat;background-position:50%;transform:scale(10,10);opacity:0;transition:transform .5s,opacity 1s}.ripple:active:after,button:active:after{transform:scale(0,0);opacity:.3;transition:0s}.close:hover,.close:focus{color:black;text-decoration:none;cursor:pointer}article,button{background:white;box-shadow:0 4px 8px 0 rgba(0,0,0,.445);border-radius:5px;margin:10px;height:auto;border:none}article hr{width:95%}article>h1{font-size:1.5em;padding:0;margin:20px;text-align:center}article h1,article h2,article h3,article h4,article h5,article p{padding-left:10px}section{display:none;height:auto}section.active{display:block}section div.flex{margin:5px auto}.text-center{text-align:center}.text-left{text-align:left}.text-right{text-align:right}:focus{outline:none}h1,h2,h3{font-weight:initial}footer{margin-top:20px;background:var(--accent)}footer span{margin:0!important}footer a{margin:0!important;border-bottom-left-radius:0!important;border-bottom-right-radius:0!important}header{position:relative;background-color:white;transition:background-color 0.2s,color 0.2s}header h1 a:before{content:'SUNDERLANDAFC'}header h1{font-weight:700}nav a{color:black;font-size:20px}nav a.active{color:var(--accent)}.pg-loading-center-middle{height:20vh!important}div.loader{display:block;margin:0 auto;width:64px;height:64px}div.loader:after{content:' ';display:block;width:46px;height:46px;margin:1px;border-radius:50%;border:5px solid #fff;border-color:#fff transparent #fff transparent;animation:lds-dual-ring 1.2s linear infinite}@keyframes lds-dual-ring{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}#mobileCheck{display:none}#mobileHamburger{display:none}#homePageTriangleCheck{display:none}#homePageTriangleCheck:checked + header nav a.active{cursor:default;color:var(--accent)}#homePageTriangleCheck:not(:checked) + header.page-home #homePageTriangle{border-top:30vh solid var(--accent)}header nav a.unclickable{cursor:default;color:#00000050;user-select:none}#homePageTriangleCheck:not(:checked) + header.page-home{background-color:var(--accent);box-shadow:0 0 0 0 rgba(0,0,0,.75)}#homePageTriangleCheck:not(:checked) + header.page-home h1 a,header.page-home nav a.active{color:white}#homePageTriangleCheck:not(:checked) + header.page-home,header.page-home h1 a,header.page-home nav a.active{transition:color 0.2s}#homePageTriangle{width:0;border-left:100vw solid transparent;border-top:0vh solid var(--accent);position:absolute;top:100px;left:0;z-index:-1;transition:all 0.3s}@keyframes fadingImages{animation-timing-function:linear;0%{opacity:1}16%{opacity:1}20%{opacity:0}100%{opacity:0}}.fadingImages{box-shadow:none;margin:0;padding:0;border-radius:5px;display:inline-block;height:144px;width:144px;margin:20px 10px 10px 10px}.fadingImages div{animation-timing-function:linear;animation:fadingImages 30s infinite;position:absolute;margin:auto;height:144px;width:144px;border-radius:5px;opacity:0}.fadingImages [class='1']{object-fit:scale-down;animation-delay:0s;background:url(../bin/Logos/1.png) center / cover}.fadingImages [class='2']{object-fit:scale-down;animation-delay:6s;background:url(../bin/Logos/2.png) center / cover}.fadingImages [class='3']{object-fit:scale-down;animation-delay:12s;background:url(../bin/Logos/3.png) center / cover}.fadingImages [class='4']{object-fit:scale-down;animation-delay:18s;background:url(../bin/Logos/4.png) center / cover}.fadingImages [class='5']{object-fit:scale-down;animation-delay:24s;background:url(../bin/Logos/5.png) center / cover}.search{width:250px;height:40px;border-radius:25px;border:1px solid #c2c2c2;text-align:center;transition:all 0.2s ease-in-out;margin-right:15px}.search input{width:75%;height:20px;padding:0;border:none;margin:10px 0 10px 10px}.search a{float:right;color:lightgrey;margin:10px 15px;transition:inherit}.search.focus{border-color:var(--accent)}.search a:hover{color:var(--accent)}#playerCardImg{height:144px;width:144px}#socialLinks a{height:35px;width:35px;border-radius:50%!important;font-size:1.2em;background-color:transparent;transition:background-color 0.3s}#socialLinks a#facebook:hover{background-color:#3b599875}#socialLinks a#twitter:hover{background-color:#00aeed75}#socialLinks a#youtube:hover{background-color:#ff000075}#socialLinks a .icon{display:block;margin:6.5px auto}#embededVideo{display:inline-block;margin:25px 2.5%;width:45%}#embededVideo iframe{padding-top:10px}#decadePlayersCard{width:30%;margin:20px 1.66%!important}@media only screen and (max-width:1155px){#decadePlayersCard{width:45%;margin:20px 2.5%!important}#recomendedVideos{justify-content:center}#recomendedVideos article{width:45vw}}@media (max-width:250px){#visibleScreen,footer{display:none!important}#tooSmallScreen{display:block}}@media (min-width:250px){#tooSmallScreen{display:none}}@media only screen and (max-width:643px){footer span{width:90%!important}#recomendedVideos{flex-wrap:wrap}#recomendedVideos article{width:90vw}}@media only screen and (max-width:838px){article,button{box-shadow:none}#mobileHamburger{display:inline-block;position:absolute;right:0;top:22.5%}#mobileHamburger label{display:inline-block;height:30px}#mobileHamburger label:hover{cursor:pointer}.hamburger{padding:15px 15px;display:inline-block;cursor:pointer;transition-property:opacity,filter;transition-duration:0.15s;transition-timing-function:linear;font:inherit;color:inherit;text-transform:none;background-color:transparent;border:0;margin:0;overflow:visible}.hamburger.active .hamburger-inner,.hamburger.active .hamburger-inner::before,.hamburger.active .hamburger-inner::after{background-color:#000}.hamburger-box{width:40px;height:24px;display:inline-block;position:relative}.hamburger-inner{display:block;top:50%;margin-top:-2px}.hamburger-inner,.hamburger-inner::before,.hamburger-inner::after{width:35px;height:4px;background-color:#000;border-radius:4px;position:absolute;transition-property:transform;transition-duration:0.15s;transition-timing-function:ease}.hamburger-inner::before,.hamburger-inner::after{content:'';display:block}.hamburger-inner::before{top:-10px}.hamburger-inner::after{bottom:-10px}.hamburger .hamburger-inner{top:2px}.hamburger .hamburger-inner::before{top:10px;transition-property:transform,opacity;transition-timing-function:ease;transition-duration:0.15s}.hamburger .hamburger-inner::after{top:20px}header.page-home nav{display:flex;flex-direction:column;justify-content:left!important;position:absolute;top:100px;left:0;width:100%!important;background-color:white;overflow-y:hidden;z-index:999}header.page-home nav>a{display:block;text-align:center;margin-top:50px}header.page-home #mobileCheck:not(:checked) + div + nav{height:0}header.page-home #mobileCheck:checked + div + nav{height:calc(100vh - 100px);overflow-y:auto;background:white}#mobileCheck:checked + #mobileHamburger .hamburger .hamburger-inner{transform:translate3d(0,10px,0) rotate(45deg)}#mobileCheck:checked + #mobileHamburger .hamburger .hamburger-inner::before{transform:rotate(-45deg) translate3d(-5.71429px,-6px,0);opacity:0}#mobileCheck:checked + #mobileHamburger .hamburger .hamburger-inner::after{transform:translate3d(0,-20px,0) rotate(-90deg)}#homePageTriangleCheck:not(:checked) + header.page-home #mobileCheck:checked + div + nav{background:var(--accent)!important}#homePageTriangleCheck:not(:checked) + header.page-home #homePageTriangle{border-top:5vh solid var(--accent)}#home .flex{width:100%}#homeOfTheMonth{flex-direction:column}#homeOfTheMonth article{box-shadow:none!important;width:100%!important;height:100%;margin:0 auto}#decadePlayersCard{width:70%;margin:20px 15%!important}}@media (max-width:700px){#playerTabHalf{flex-direction:column}#playerTabHalf button{display:block;margin:0 auto;width:95%!important}}@media (max-width:629px){.fadingImages{float:none;display:block;margin:0 auto!important}#homeWelcomeCard article:first-child{margin:0;background:transparent}#homeWelcomeCard article:first-child img{margin-top:0}#homeWelcomeCard{margin-top:0!important}#decadePlayersCard{width:90%;margin:20px 5%!important}}@media (max-width:589px){#topPlayers{flex-direction:column}#topPlayers button{margin:0 auto;width:100%}#topPlayers button:last-child{display:none}}@media (max-width:450px){header h1 a:before{content:'SAFC'}}@media only screen and (max-width:1448px){#homePlayersCard{height:auto;padding:15px}#homePlayersCard img{float:none}#homePlayersCard h1{margin:10px auto 15px auto}#homePlayersCard span{margin:100px auto!important}}@media (max-width:838px){#playerCard,#playerCard article{width:100%}#playerCard article img{float:none;display:block;margin:0 auto}}@media (max-width:650px){header.page-player h1 a:before{content:'SAFC'}#decadePlayersCard{height:280px}#decadePlayersCard img{margin:0 auto;float:none}#decadePlayersCard h1{margin:10px auto 15px auto;float:none}#decadePlayersCard span{padding:5px!important}}@media (max-width:530px){header.page-player{flex-direction:column;justify-content:center}header.page-player nav{width:100%!important;justify-content:center!important}header.page-player nav div{margin:0 auto}header.page-player nav div div .searchResults{display:block;background:white;color:black;width:100vw!important;padding:10px}#playerCard{margin-top:25px}}@media (max-width:450px){#playerCard article div.flex{flex-direction:column;justify-content:center}#playerCard article div.flex p{text-align:center;display:block;width:250px;margin:16px auto}#embededVideo{display:inline-block;margin:15px 1%;width:98%}}@media (min-width:1000px){.page-decade nav{margin-left:auto}}@media (max-width:1000px){header.page-decade nav{width:calc(100vw - 339px);justify-content:space-around}#embededVideo{display:inline-block;margin:25px 5%;width:90%}#recommendedVideo{width:90vw}}@media (max-width:838px){header.page-decade nav{display:flex;flex-direction:column;justify-content:left!important;position:absolute;top:100px;left:0;width:100%!important;background-color:white;overflow-y:hidden;z-index:999}header.page-decade nav a,header.page-decade nav .search{display:block;text-align:center;margin:25px auto}header.page-decade #mobileCheck:not(:checked) + div + nav{height:0}header.page-decade #mobileCheck:checked + div + nav{height:calc(100vh - 100px);overflow-y:auto;background:white}}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+body {
+    line-height: 1;
+    font-family: sans-serif
+}
+
+body.navActive {
+    max-height: 100%;
+    max-width: 100vw;
+    overflow: hidden!important
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+.inline {
+    display: inline-block
+}
+
+.w-full {
+    width: 100%
+}
+
+.w-three-quarters {
+    width: 75%
+}
+
+.w-half {
+    width: 50%
+}
+
+.w-quarter {
+    width: 25%
+}
+
+.w-third {
+    width: 33.33%
+}
+
+.w-fifth {
+    width: 20%
+}
+
+.w-tenth {
+    width: 10%
+}
+
+.w-500 {
+    width: 500px
+}
+
+.w-400 {
+    width: 400px
+}
+
+.w-300 {
+    width: 300px
+}
+
+.w-200 {
+    width: 200px
+}
+
+.w-100 {
+    width: 100px
+}
+
+.h-full {
+    height: 100%
+}
+
+.h-three-quarters {
+    height: 75%
+}
+
+.h-half {
+    height: 50%
+}
+
+.h-quarter {
+    height: 25%
+}
+
+.h-fifth {
+    height: 20%
+}
+
+.h-tenth {
+    height: 10%
+}
+
+.h-500 {
+    height: 500px
+}
+
+.h-400 {
+    height: 400px
+}
+
+.h-300 {
+    height: 300px
+}
+
+.h-200 {
+    height: 200px
+}
+
+.h-150 {
+    height: 150px
+}
+
+.h-100 {
+    height: 100px
+}
+
+.flex {
+    display: flex
+}
+
+.flex.h-left {
+    justify-content: left
+}
+
+.flex.h-right {
+    justify-content: right
+}
+
+.flex.h-center {
+    justify-content: center
+}
+
+.flex.h-spacearound {
+    justify-content: space-around
+}
+
+.flex.h-spacebetween {
+    justify-content: space-between
+}
+
+.flex.v-top {
+    align-items: top
+}
+
+.flex.v-center {
+    align-items: center
+}
+
+.flex.v-bottom {
+    align-items: bottom
+}
+
+.flex.column {
+    flex-direction: column
+}
+
+.left {
+    float: left
+}
+
+.right {
+    float: right
+}
+
+:root {
+    --accent: #EB172B
+}
+
+.accent {
+    color: var(--accent);
+    background: initial
+}
+
+.white {
+    color: white;
+    background: initial
+}
+
+.black {
+    color: black;
+    background: initial
+}
+
+a {
+    color: var(--accent);
+    text-decoration: none;
+    cursor: pointer
+}
+
+.label {
+    width: auto;
+    background-color: white;
+    color: black;
+    border-radius: 3px;
+    padding: 3px;
+    margin: .25em
+}
+
+.label.accent {
+    background-color: var(--accent);
+    color: white
+}
+
+img {
+    object-fit: cover;
+    object-position: center;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    display: inline-block;
+    height: 144px;
+    width: 144px;
+    margin: 20px 10px 10px 10px
+}
+
+iframe {
+    width: calc(100% - 20px);
+    height: 300px;
+    padding: 0 10px 10px 10px;
+    border: none;
+    border-radius: 5px
+}
+
+.icon,
+.flag {
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    display: inline-block;
+    vertical-align: sub;
+    width: 1.25em;
+    height: 1.1em
+}
+
+.icon.heart {
+    background-image: url(../bin/icons/heart.svg)
+}
+
+.icon.code {
+    background-image: url(../bin/icons/code.svg)
+}
+
+.icon.facebook {
+    background-image: url(../bin/icons/facebook.svg)
+}
+
+.icon.twitter {
+    background-image: url(../bin/icons/twitter.svg)
+}
+
+.icon.youtube {
+    background-image: url(../bin/icons/youtube.svg)
+}
+
+.icon.home {
+    background-image: url(../bin/icons/home.svg)
+}
+
+.flag.English {
+    background-image: url(../bin/icons/england.svg)
+}
+
+.flag.Scottish {
+    background-image: url(../bin/icons/scotland.svg)
+}
+
+.flag.Welsh {
+    background-image: url(../bin/icons/wales.svg)
+}
+
+.flag.Irish {
+    background-image: url(../bin/Flags/ireland.svg)
+}
+
+.flag.Swedish {
+    background-image: url(../bin/Flags/sweden.svg)
+}
+
+button>h1 {
+    font-size: 30px
+}
+
+.ripple,
+button {
+    border: none;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0)
+}
+
+.ripple:after,
+button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, var(--accent) 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .5s, opacity 1s
+}
+
+.ripple:active:after,
+button:active:after {
+    transform: scale(0, 0);
+    opacity: .3;
+    transition: 0s
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer
+}
+
+article,
+button {
+    background: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .445);
+    border-radius: 5px;
+    margin: 10px;
+    height: auto;
+    border: none
+}
+
+article hr {
+    width: 95%
+}
+
+article>h1 {
+    font-size: 1.5em;
+    padding: 0;
+    margin: 20px;
+    text-align: center
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article p {
+    padding-left: 10px
+}
+
+section {
+    display: none;
+    height: auto
+}
+
+section.active {
+    display: block
+}
+
+section div.flex {
+    margin: 5px auto
+}
+
+.text-center {
+    text-align: center
+}
+
+.text-left {
+    text-align: left
+}
+
+.text-right {
+    text-align: right
+}
+
+:focus {
+    outline: none
+}
+
+h1,
+h2,
+h3 {
+    font-weight: initial
+}
+
+footer {
+    margin-top: 20px;
+    background: var(--accent)
+}
+
+footer span {
+    margin: 0!important
+}
+
+footer a {
+    margin: 0!important;
+    border-bottom-left-radius: 0!important;
+    border-bottom-right-radius: 0!important
+}
+
+.subscribe{
+    font-size: 0.9em;
+}
+
+.subscribe i{
+    margin-right: 10px;
+}
+
+header {
+    position: relative;
+    background-color: white;
+    transition: background-color 0.2s, color 0.2s
+}
+
+header h1 a:before {
+    content: 'SUNDERLANDAFC'
+}
+
+header h1 {
+    font-weight: 700
+}
+
+nav a {
+    color: black;
+    font-size: 20px
+}
+
+nav a.active {
+    color: var(--accent)
+}
+
+.pg-loading-center-middle {
+    height: 20vh!important
+}
+
+div.loader {
+    display: block;
+    margin: 0 auto;
+    width: 64px;
+    height: 64px
+}
+
+div.loader:after {
+    content: ' ';
+    display: block;
+    width: 46px;
+    height: 46px;
+    margin: 1px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite
+}
+
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+#mobileCheck {
+    display: none
+}
+
+#mobileHamburger {
+    display: none
+}
+
+#homePageTriangleCheck {
+    display: none
+}
+
+#homePageTriangleCheck:checked + header nav a.active {
+    cursor: default;
+    color: var(--accent)
+}
+
+#homePageTriangleCheck:not(:checked) + header.page-home #homePageTriangle {
+    border-top: 30vh solid var(--accent)
+}
+
+header nav a.unclickable {
+    cursor: default;
+    color: #00000050;
+    user-select: none
+}
+
+#homePageTriangleCheck:not(:checked) + header.page-home {
+    background-color: var(--accent);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, .75)
+}
+
+#homePageTriangleCheck:not(:checked) + header.page-home h1 a,
+header.page-home nav a.active {
+    color: white
+}
+
+#homePageTriangleCheck:not(:checked) + header.page-home,
+header.page-home h1 a,
+header.page-home nav a.active {
+    transition: color 0.2s
+}
+
+#homePageTriangle {
+    width: 0;
+    border-left: 100vw solid transparent;
+    border-top: 0vh solid var(--accent);
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: -1;
+    transition: all 0.3s
+}
+
+@keyframes fadingImages {
+    animation-timing-function: linear;
+    0% {
+        opacity: 1
+    }
+    16% {
+        opacity: 1
+    }
+    20% {
+        opacity: 0
+    }
+    100% {
+        opacity: 0
+    }
+}
+
+.fadingImages {
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 5px;
+    display: inline-block;
+    height: 144px;
+    width: 144px;
+    margin: 20px 10px 10px 10px
+}
+
+.fadingImages div {
+    animation-timing-function: linear;
+    animation: fadingImages 30s infinite;
+    position: absolute;
+    margin: auto;
+    height: 144px;
+    width: 144px;
+    border-radius: 5px;
+    opacity: 0
+}
+
+.fadingImages [class='1'] {
+    object-fit: scale-down;
+    animation-delay: 0s;
+    background: url(../bin/Logos/1.png) center / cover
+}
+
+.fadingImages [class='2'] {
+    object-fit: scale-down;
+    animation-delay: 6s;
+    background: url(../bin/Logos/2.png) center / cover
+}
+
+.fadingImages [class='3'] {
+    object-fit: scale-down;
+    animation-delay: 12s;
+    background: url(../bin/Logos/3.png) center / cover
+}
+
+.fadingImages [class='4'] {
+    object-fit: scale-down;
+    animation-delay: 18s;
+    background: url(../bin/Logos/4.png) center / cover
+}
+
+.fadingImages [class='5'] {
+    object-fit: scale-down;
+    animation-delay: 24s;
+    background: url(../bin/Logos/5.png) center / cover
+}
+
+.search {
+    width: 250px;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid #c2c2c2;
+    text-align: center;
+    transition: all 0.2s ease-in-out;
+    margin-right: 15px
+}
+
+.search input {
+    width: 75%;
+    height: 20px;
+    padding: 0;
+    border: none;
+    margin: 10px 0 10px 10px
+}
+
+.search a {
+    float: right;
+    color: lightgrey;
+    margin: 10px 15px;
+    transition: inherit
+}
+
+.search.focus {
+    border-color: var(--accent)
+}
+
+.search a:hover {
+    color: var(--accent)
+}
+
+#playerCardImg {
+    height: 144px;
+    width: 144px
+}
+
+#socialLinks a {
+    height: 35px;
+    width: 35px;
+    border-radius: 50%!important;
+    font-size: 1.2em;
+    background-color: transparent;
+    transition: background-color 0.3s
+}
+
+#socialLinks a#facebook:hover {
+    background-color: #3b599875
+}
+
+#socialLinks a#twitter:hover {
+    background-color: #00aeed75
+}
+
+#socialLinks a#youtube:hover {
+    background-color: #ff000075
+}
+
+#socialLinks a .icon {
+    display: block;
+    margin: 6.5px auto
+}
+
+#embededVideo {
+    display: inline-block;
+    margin: 25px 2.5%;
+    width: 45%
+}
+
+#embededVideo iframe {
+    padding-top: 10px
+}
+
+#decadePlayersCard {
+    width: 30%;
+    margin: 20px 1.66%!important
+}
+
+@media only screen and (max-width:1155px) {
+    #decadePlayersCard {
+        width: 45%;
+        margin: 20px 2.5%!important
+    }
+    #recomendedVideos {
+        justify-content: center
+    }
+    #recomendedVideos article {
+        width: 45vw
+    }
+}
+
+@media (max-width:250px) {
+    #visibleScreen,
+    footer {
+        display: none!important
+    }
+    #tooSmallScreen {
+        display: block
+    }
+}
+
+@media (min-width:250px) {
+    #tooSmallScreen {
+        display: none
+    }
+}
+
+@media only screen and (max-width:643px) {
+    footer span {
+        width: 90%!important
+    }
+    #recomendedVideos {
+        flex-wrap: wrap
+    }
+    #recomendedVideos article {
+        width: 90vw
+    }
+}
+
+@media only screen and (max-width:838px) {
+    article,
+    button {
+        box-shadow: none
+    }
+    #mobileHamburger {
+        display: inline-block;
+        position: absolute;
+        right: 0;
+        top: 22.5%
+    }
+    #mobileHamburger label {
+        display: inline-block;
+        height: 30px
+    }
+    #mobileHamburger label:hover {
+        cursor: pointer
+    }
+    .hamburger {
+        padding: 15px 15px;
+        display: inline-block;
+        cursor: pointer;
+        transition-property: opacity, filter;
+        transition-duration: 0.15s;
+        transition-timing-function: linear;
+        font: inherit;
+        color: inherit;
+        text-transform: none;
+        background-color: transparent;
+        border: 0;
+        margin: 0;
+        overflow: visible
+    }
+    .hamburger.active .hamburger-inner,
+    .hamburger.active .hamburger-inner::before,
+    .hamburger.active .hamburger-inner::after {
+        background-color: #000
+    }
+    .hamburger-box {
+        width: 40px;
+        height: 24px;
+        display: inline-block;
+        position: relative
+    }
+    .hamburger-inner {
+        display: block;
+        top: 50%;
+        margin-top: -2px
+    }
+    .hamburger-inner,
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+        width: 35px;
+        height: 4px;
+        background-color: #000;
+        border-radius: 4px;
+        position: absolute;
+        transition-property: transform;
+        transition-duration: 0.15s;
+        transition-timing-function: ease
+    }
+    .hamburger-inner::before,
+    .hamburger-inner::after {
+        content: '';
+        display: block
+    }
+    .hamburger-inner::before {
+        top: -10px
+    }
+    .hamburger-inner::after {
+        bottom: -10px
+    }
+    .hamburger .hamburger-inner {
+        top: 2px
+    }
+    .hamburger .hamburger-inner::before {
+        top: 10px;
+        transition-property: transform, opacity;
+        transition-timing-function: ease;
+        transition-duration: 0.15s
+    }
+    .hamburger .hamburger-inner::after {
+        top: 20px
+    }
+    header.page-home nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: left!important;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%!important;
+        background-color: white;
+        overflow-y: hidden;
+        z-index: 999
+    }
+    header.page-home nav>a {
+        display: block;
+        text-align: center;
+        margin-top: 50px
+    }
+    header.page-home #mobileCheck:not(:checked) + div + nav {
+        height: 0
+    }
+    header.page-home #mobileCheck:checked + div + nav {
+        height: calc(100vh - 100px);
+        overflow-y: auto;
+        background: white
+    }
+    #mobileCheck:checked + #mobileHamburger .hamburger .hamburger-inner {
+        transform: translate3d(0, 10px, 0) rotate(45deg)
+    }
+    #mobileCheck:checked + #mobileHamburger .hamburger .hamburger-inner::before {
+        transform: rotate(-45deg) translate3d(-5.71429px, -6px, 0);
+        opacity: 0
+    }
+    #mobileCheck:checked + #mobileHamburger .hamburger .hamburger-inner::after {
+        transform: translate3d(0, -20px, 0) rotate(-90deg)
+    }
+    #homePageTriangleCheck:not(:checked) + header.page-home #mobileCheck:checked + div + nav {
+        background: var(--accent)!important
+    }
+    #homePageTriangleCheck:not(:checked) + header.page-home #homePageTriangle {
+        border-top: 5vh solid var(--accent)
+    }
+    #home .flex {
+        width: 100%
+    }
+    #homeOfTheMonth {
+        flex-direction: column
+    }
+    #homeOfTheMonth article {
+        box-shadow: none!important;
+        width: 100%!important;
+        height: 100%;
+        margin: 0 auto
+    }
+    #decadePlayersCard {
+        width: 70%;
+        margin: 20px 15%!important
+    }
+}
+
+@media (max-width:700px) {
+    #playerTabHalf {
+        flex-direction: column
+    }
+    #playerTabHalf button {
+        display: block;
+        margin: 0 auto;
+        width: 95%!important
+    }
+}
+
+@media (max-width:629px) {
+    .fadingImages {
+        float: none;
+        display: block;
+        margin: 0 auto!important
+    }
+    #homeWelcomeCard article:first-child {
+        margin: 0;
+        background: transparent
+    }
+    #homeWelcomeCard article:first-child img {
+        margin-top: 0
+    }
+    #homeWelcomeCard {
+        margin-top: 0!important
+    }
+    #decadePlayersCard {
+        width: 90%;
+        margin: 20px 5%!important
+    }
+}
+
+@media (max-width:589px) {
+    #topPlayers {
+        flex-direction: column
+    }
+    #topPlayers button {
+        margin: 0 auto;
+        width: 100%
+    }
+    #topPlayers button:last-child {
+        display: none
+    }
+}
+
+@media (max-width:450px) {
+    header h1 a:before {
+        content: 'SAFC'
+    }
+}
+
+@media only screen and (max-width:1448px) {
+    #homePlayersCard {
+        height: auto;
+        padding: 15px
+    }
+    #homePlayersCard img {
+        float: none
+    }
+    #homePlayersCard h1 {
+        margin: 10px auto 15px auto
+    }
+    #homePlayersCard span {
+        margin: 100px auto!important
+    }
+}
+
+@media (max-width:838px) {
+    #playerCard,
+    #playerCard article {
+        width: 100%
+    }
+    #playerCard article img {
+        float: none;
+        display: block;
+        margin: 0 auto
+    }
+}
+
+@media (max-width:650px) {
+    header.page-player h1 a:before {
+        content: 'SAFC'
+    }
+    #decadePlayersCard {
+        height: 280px
+    }
+    #decadePlayersCard img {
+        margin: 0 auto;
+        float: none
+    }
+    #decadePlayersCard h1 {
+        margin: 10px auto 15px auto;
+        float: none
+    }
+    #decadePlayersCard span {
+        padding: 5px!important
+    }
+}
+
+@media (max-width:530px) {
+    header.page-player {
+        flex-direction: column;
+        justify-content: center
+    }
+    header.page-player nav {
+        width: 100%!important;
+        justify-content: center!important
+    }
+    header.page-player nav div {
+        margin: 0 auto
+    }
+    header.page-player nav div div .searchResults {
+        display: block;
+        background: white;
+        color: black;
+        width: 100vw!important;
+        padding: 10px
+    }
+    #playerCard {
+        margin-top: 25px
+    }
+}
+
+@media (max-width:450px) {
+    #playerCard article div.flex {
+        flex-direction: column;
+        justify-content: center
+    }
+    #playerCard article div.flex p {
+        text-align: center;
+        display: block;
+        width: 250px;
+        margin: 16px auto
+    }
+    #embededVideo {
+        display: inline-block;
+        margin: 15px 1%;
+        width: 98%
+    }
+}
+
+@media (min-width:1000px) {
+    .page-decade nav {
+        margin-left: auto
+    }
+}
+
+@media (max-width:1000px) {
+    header.page-decade nav {
+        width: calc(100vw - 339px);
+        justify-content: space-around
+    }
+    #embededVideo {
+        display: inline-block;
+        margin: 25px 5%;
+        width: 90%
+    }
+    #recommendedVideo {
+        width: 90vw
+    }
+}
+
+@media (max-width:838px) {
+    header.page-decade nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: left!important;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%!important;
+        background-color: white;
+        overflow-y: hidden;
+        z-index: 999
+    }
+    header.page-decade nav a,
+    header.page-decade nav .search {
+        display: block;
+        text-align: center;
+        margin: 25px auto
+    }
+    header.page-decade #mobileCheck:not(:checked) + div + nav {
+        height: 0
+    }
+    header.page-decade #mobileCheck:checked + div + nav {
+        height: calc(100vh - 100px);
+        overflow-y: auto;
+        background: white
+    }
+}

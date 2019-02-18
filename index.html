@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,17 +13,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/please-wait/0.0.5/please-wait.min.css" integrity="sha256-+EVukertp+JNXktfbiOXsUjvPcnHOkkNkPixeI9mg1o=" crossorigin="anonymous" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/please-wait/0.0.5/please-wait.min.js" integrity="sha256-VdpyBKkQpTaeKm6ZDxHfYXrnZKY6J+uMp0Ok1wq4Nn4=" crossorigin="anonymous"></script>
 </head>
+
 <body onload="loading_screen.finish();">
     <script>
         var loading_screen = pleaseWait({
-        	logo: "bin/Logos/1.png",
-        	backgroundColor: "#EB172B",
-        	loadingHtml: "<div class='loader'></div>"
+            logo: "bin/Logos/1.png",
+            backgroundColor: "#EB172B",
+            loadingHtml: "<div class='loader'></div>"
         });
     </script>
     <noscript>
-			<h1 class="w-full h-full" style="margin: 0; padding: 10px; position: absolute; top: 0; left: 0; z-index: 9999; background: white;"><strong class="accent">no javascsript support detected, </strong>please enable it or access this site from a computer.</h1>
-		</noscript>
+        <h1 class="w-full h-full" style="margin: 0; padding: 10px; position: absolute; top: 0; left: 0; z-index: 9999; background: white;"><strong class="accent">no javascsript support detected, </strong>please enable it or access this site from a computer.</h1>
+    </noscript>
     <div class="w-full" id="tooSmallScreen">
         <h1 class="w-full" style="margin-left: 10px;"><strong class="accent">your device is too small, </strong>please access this site from a computer.</h1>
     </div>
@@ -33,10 +35,10 @@
             <input type="checkbox" id="mobileCheck">
             <div id="mobileHamburger">
                 <label for="mobileCheck" class="hamburger">
-					<span class="hamburger-box">
+                    <span class="hamburger-box">
 					<span class="hamburger-inner"></span>
-					</span>
-					</label>
+                    </span>
+                </label>
             </div>
             <nav class="flex h-spacearound v-center right w-half h-full" style="margin-left: auto; transition: color 0.2s, background-color 0.2s;">
                 <a id="home" class="clickable active">Home</a>
@@ -60,8 +62,7 @@
                     <h1 class="accent" style="font-size: 35px">Welcome!</h1>
                     <p>
                         Sunderland have a long and illustrious history.
-                        <br>Our 6 League Titles make us the 6th most successful team in English football, but our glory years were before the advent of live games or even highlights of games were available.
-                        Here, you can watch videos of Sunderland matches from the 1900’s to the 1990’s - including some of the classic games from Roker Park.
+                        <br>Our 6 League Titles make us the 6th most successful team in English football, but our glory years were before the advent of live games or even highlights of games were available. Here, you can watch videos of Sunderland matches from the 1900’s to the 1990’s - including some of the classic games from Roker Park.
                         <br>You can also see some of the star players of the past in action, and some of our greatest goals and moments.
                         <br>Hopefully is brings back many memories and shows the great heritage of our club.
                     </p>
@@ -70,20 +71,20 @@
             <h1 class="text-center">Watch Sunderland's record post war scorers!</h1>
             <div class="flex h-spacearound w-three-quarters" id="topPlayers">
                 <button class="w-third" onclick="changePagePlayer(1)" id="homePlayersCard">
-						<img id="playerCardImg" class="left" src="bin/Players/1.png" style="margin: 5px 10px 10px 10px">
-						<h1 class="center">Kevin<br>Phillips</h1>
-						<span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">235 games, 130 goals</span>
-					</button>
+                    <img id="playerCardImg" class="left" src="bin/Players/1.png" style="margin: 5px 10px 10px 10px">
+                    <h1 class="center">Kevin<br>Phillips</h1>
+                    <span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">235 games, 130 goals</span>
+                </button>
                 <button class="w-third" onclick="changePagePlayer(730)" id="homePlayersCard">
-						<img id="playerCardImg" class="left" src="bin/Players/730.png" style="margin: 5px 10px 10px 10px">
-						<h1 class="center">Gary<br>Rowell</h1>
-						<span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">297 games, 103 goals</span>
-					</button>
+                    <img id="playerCardImg" class="left" src="bin/Players/730.png" style="margin: 5px 10px 10px 10px">
+                    <h1 class="center">Gary<br>Rowell</h1>
+                    <span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">297 games, 103 goals</span>
+                </button>
                 <button class="w-third" onclick="changePagePlayer(749)" id="homePlayersCard">
-						<img id="playerCardImg" class="left" src="bin/Players/749.png" style="margin: 5px 10px 10px 10px">
-						<h1 class="center">Len<br>Shackleton</h1>
-						<span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">348 games, 100 goals</span>
-					</button>
+                    <img id="playerCardImg" class="left" src="bin/Players/749.png" style="margin: 5px 10px 10px 10px">
+                    <h1 class="center">Len<br>Shackleton</h1>
+                    <span class="label accent text-center" style="margin: 25px 10px 10px 10px; padding: 7.5px;">348 games, 100 goals</span>
+                </button>
             </div>
             <div class="flex h-spacearound w-three-quarters" id="homeOfTheMonth">
                 <article class="w-half">
@@ -99,85 +100,85 @@
         <section id="decades">
             <div class="flex h-spacearound h-three-quarters" id="playerTabHalf">
                 <button class="w-half" onclick="decadePage('PWW1#videos')">
-						<h1 style="margin: 25px">Pre WW1</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1r2dun-4BymOyRoc0dyDfueHyXn564G8W" style="height: 250px; width: calc(100% - 20px);">
-					</button>
+                    <h1 style="margin: 25px">Pre WW1</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1r2dun-4BymOyRoc0dyDfueHyXn564G8W" style="height: 250px; width: calc(100% - 20px);">
+                </button>
                 <button class="w-half" onclick="decadePage('PWW2#videos')">
-						<h1 style="margin: 25px">Pre WW2</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1WJRgfiVQxm_GbpdvRxM6HOTdBq737QQ-" style="height: 250px; width: calc(100% - 20px);">
-					</button>
+                    <h1 style="margin: 25px">Pre WW2</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1WJRgfiVQxm_GbpdvRxM6HOTdBq737QQ-" style="height: 250px; width: calc(100% - 20px);">
+                </button>
             </div>
             <div class="flex h-spacearound h-three-quarters" id="playerTabHalf">
                 <button class="w-half" onclick="decadePage('1940#videos')">
-						<h1 style="margin: 25px">1940's</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1q8CCJo6xq4Ua3gFZXJQ0rVOeim8EFjwZ" style="height: 250px; width: calc(100% - 20px);">
-					</button>
+                    <h1 style="margin: 25px">1940's</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1q8CCJo6xq4Ua3gFZXJQ0rVOeim8EFjwZ" style="height: 250px; width: calc(100% - 20px);">
+                </button>
                 <button class="w-half" onclick="decadePage('1950#videos')">
-						<h1 style="margin: 25px">1950's</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1mYlkP1bfrcdbqBpoAOPY4uREmvbir7dO" style="height: 250px; width: calc(100% - 20px);">
-					</button>
+                    <h1 style="margin: 25px">1950's</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1mYlkP1bfrcdbqBpoAOPY4uREmvbir7dO" style="height: 250px; width: calc(100% - 20px);">
+                </button>
             </div>
             <div class="flex h-spacearound h-three-quarters" id="playerTabHalf">
                 <button class="w-half" onclick="decadePage('1960#videos')">
-						<h1 style="margin: 25px">1960's</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1aLBqq8Dxw6oNJrJsBaQvzZmRFcAWulzz" style="height: 250px; width: calc(100% - 20px);">
-					</button>
+                    <h1 style="margin: 25px">1960's</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1aLBqq8Dxw6oNJrJsBaQvzZmRFcAWulzz" style="height: 250px; width: calc(100% - 20px);">
+                </button>
                 <button class="w-half" onclick="decadePage('1970#videos')">
-						<h1 style="margin: 25px">1970's</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1IpSgCyhLWyM-1b2RIUiI-ZPTekP4iP-P" style="height: 250px; width: calc(100% - 20px);">
-					</button>
+                    <h1 style="margin: 25px">1970's</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1IpSgCyhLWyM-1b2RIUiI-ZPTekP4iP-P" style="height: 250px; width: calc(100% - 20px);">
+                </button>
             </div>
             <div class="flex h-spacearound h-three-quarters" id="playerTabHalf">
                 <button class="w-half" onclick="decadePage('1980#videos')">
-						<h1 style="margin: 25px">1980's</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1q-XmnQFb57e-WzerJbDwBL2vZ1ffeZ-E" style="height: 250px; width: calc(100% - 20px);">
-					</button>
+                    <h1 style="margin: 25px">1980's</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1q-XmnQFb57e-WzerJbDwBL2vZ1ffeZ-E" style="height: 250px; width: calc(100% - 20px);">
+                </button>
                 <button class="w-half" onclick="decadePage('1990#videos')">
-						<h1 style="margin: 25px" onclick="decadePage('1990#videos')">1990's</h1>
-						<img src="https://drive.google.com/uc?export=download&id=155FbrDSzbt_TGXBLmXuTYEQVMaE4eDy6" style="height: 250px; width: calc(100% - 20px);">
-					</button>
+                    <h1 style="margin: 25px" onclick="decadePage('1990#videos')">1990's</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=155FbrDSzbt_TGXBLmXuTYEQVMaE4eDy6" style="height: 250px; width: calc(100% - 20px);">
+                </button>
             </div>
         </section>
         <section id="players">
             <div class="flex h-spacearound h-three-quarters" id="playerTabHalf">
                 <button class="w-half" onclick="decadePage('PWW1#players')">
-						<h1 class="center" style="margin: 25px">Pre WW1</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1QRu4MDhJ2LV0MACRzYz15-XzfbGHlO7Z" style="height: 150px; width: calc(100% - 20px);">
-					</button>
+                    <h1 class="center" style="margin: 25px">Pre WW1</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1QRu4MDhJ2LV0MACRzYz15-XzfbGHlO7Z" style="height: 150px; width: calc(100% - 20px);">
+                </button>
                 <button class="w-half" onclick="decadePage('PWW2#players')">
-						<h1 class="center" style="margin: 25px">Pre WW2</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1vY3FxQvV6a60S6STWdObRtbyg7_DlWQA" style="height: 150px; width: calc(100% - 20px);">
-					</button>
+                    <h1 class="center" style="margin: 25px">Pre WW2</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1vY3FxQvV6a60S6STWdObRtbyg7_DlWQA" style="height: 150px; width: calc(100% - 20px);">
+                </button>
             </div>
             <div class="flex space three-quarter" id="playerTabHalf">
                 <button class="w-half" onclick="decadePage('1940#players')">
-						<h1 class="center" style="margin: 25px">1940's</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1901DnRfFkXlXjHbLnnvor-YX_vPdrUBQ" style="height: 150px; width: calc(100% - 20px);">
-					</button>
+                    <h1 class="center" style="margin: 25px">1940's</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1901DnRfFkXlXjHbLnnvor-YX_vPdrUBQ" style="height: 150px; width: calc(100% - 20px);">
+                </button>
                 <button class="w-half" onclick="decadePage('1950#players')">
-						<h1 class="center" style="margin: 25px">1950's</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1btiq37DXhc21Dsid9WUXSwMbanoxRxfI" style="height: 150px; width: calc(100% - 20px);">
-					</button>
+                    <h1 class="center" style="margin: 25px">1950's</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1btiq37DXhc21Dsid9WUXSwMbanoxRxfI" style="height: 150px; width: calc(100% - 20px);">
+                </button>
             </div>
             <div class="flex space three-quarter" id="playerTabHalf">
                 <button class="w-half" onclick="decadePage('1960#players')">
-						<h1 class="center" style="margin: 25px">1960's</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1pNSd_fPy3yywtCV64o_JrvRM2yS3O1F6" style="height: 150px; width: calc(100% - 20px);">
-					</button>
+                    <h1 class="center" style="margin: 25px">1960's</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1pNSd_fPy3yywtCV64o_JrvRM2yS3O1F6" style="height: 150px; width: calc(100% - 20px);">
+                </button>
                 <button class="w-half" onclick="decadePage('1970#players')">
-						<h1 class="center" style="margin: 25px">1970's</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1PDjTxI75fBmSlTU8s3Z5Y3hhfUo8Wag9" style="height: 150px; width: calc(100% - 20px);">
-					</button>
+                    <h1 class="center" style="margin: 25px">1970's</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1PDjTxI75fBmSlTU8s3Z5Y3hhfUo8Wag9" style="height: 150px; width: calc(100% - 20px);">
+                </button>
             </div>
             <div class="flex space three-quarter" id="playerTabHalf">
                 <button class="w-half" onclick="decadePage('1980#players')">
-						<h1 class="center" style="margin: 25px">1980's</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1ReOWymDh6dwNqUaHwIEUkdAVB33gaHjV" style="height: 150px; width: calc(100% - 20px);">
-					</button>
+                    <h1 class="center" style="margin: 25px">1980's</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1ReOWymDh6dwNqUaHwIEUkdAVB33gaHjV" style="height: 150px; width: calc(100% - 20px);">
+                </button>
                 <button class="w-half" onclick="decadePage('1990#players')">
-						<h1 class="center" style="margin: 25px">1990's</h1>
-						<img src="https://drive.google.com/uc?export=download&id=1EhHU-dIadcV1p-01eIdmN3PI5XRBkXff" style="height: 150px; width: calc(100% - 20px);">
-					</button>
+                    <h1 class="center" style="margin: 25px">1990's</h1>
+                    <img src="https://drive.google.com/uc?export=download&id=1EhHU-dIadcV1p-01eIdmN3PI5XRBkXff" style="height: 150px; width: calc(100% - 20px);">
+                </button>
             </div>
         </section>
         <section id="top10s">
@@ -189,8 +190,7 @@
                     <h1 class="accent" style="font-size: 35px">About</h1>
                     <p>
                         Sunderland have a long and illustrious history.
-                        <br>Our 6 League Titles make us the 6th most successful team in English football, but our glory years were before the advent of live games or even highlights of games were available.
-                        Here, you can watch videos of Sunderland matches from the 1900’s to the 1990’s - including some of the classic games from Roker Park.
+                        <br>Our 6 League Titles make us the 6th most successful team in English football, but our glory years were before the advent of live games or even highlights of games were available. Here, you can watch videos of Sunderland matches from the 1900’s to the 1990’s - including some of the classic games from Roker Park.
                         <br>You can also see some of the star players of the past in action, and some of our greatest goals and moments.
                         <br>Hopefully is brings back many memories and shows the great heritage of our club.
                     </p>
@@ -206,18 +206,26 @@
         <footer class="flex h-center v-center w-full h-150 column absolute">
             <a href="https://ryncmrfrd.me" style="padding: 5px 7px  3px 7px;" class="label text-center">Built by  Ryan Comerford</a>
             <span class="label text-center">
-					If you know of any other vintage Sunderland footage contact us at 
-					<a href="mailto:hello@sunderlandafc.tv" target="_blank">hello@sunderlandafc.tv</a><br>
-					<div class="flex h-spacearound" style="margin: 2.5px 0 0 0;" id="socialLinks">
-						<a id="youtube" href="https://go.sunderlandafc.tv/youtube"><i class="icon youtube"></i></a>
-					</div>
-				</span>
+                If you know of any other vintage Sunderland footage contact us at <a href="mailto:hello@sunderlandafc.tv" target="_blank">hello@sunderlandafc.tv</a><br>
+                <div class="flex h-spacearound" style="margin: 2.5px 0 0 0;" id="socialLinks">
+                    <span class="label subscribe"><i class="icon youtube"></i><a href="https://go.sunderlandafc.tv/youtube">Subscribe on YouTube</a></span>
+            </div>
+            </span>
         </footer>
     </main>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133668868-1"></script>
-    <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag("js", new Date());gtag("config", "UA-133668868-1");</script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+        gtag("config", "UA-133668868-1");
+    </script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/papaparse.min.js"></script>
-    <script src="js/homepage.js"></script>
+    <script src="js/homepage.min.js"></script>
 </body>
+
 </html>
